@@ -81,21 +81,29 @@ module.exports = {
         '5xl': '2.5rem',
       },
 
+      maxWidth: {
+        '1920': '120rem',
+      },
+
       dropShadow: {
         'main-photo': '0 16px 8px rgba(129, 70, 255, 0.8)',
-        'home': '0 0 1rem rgba(129, 70, 255, 0.8)',
+        home: '0 0 1rem rgba(129, 70, 255, 0.8)',
       },
 
       keyframes: {
         blurAnimation: {
-          from: { transform: 'translate(0, 120px)', filter: 'blur(33px)', opacity: '0' },
+          from: {
+            transform: 'translate(0, 120px)',
+            filter: 'blur(33px)',
+            opacity: '0',
+          },
           to: { transform: 'translate(0)', filter: 'blur(0)', opacity: '1' },
         },
         mainPhoto: {
           '0%': { 'border-radius': '60% 40% 30% 70%/60% 30% 70% 40%' },
           '50%': { 'border-radius': '30% 60% 70% 40%/50% 60% 30% 60%' },
           '100%': { 'border-radius': '60% 40% 30% 70%/60% 30% 70% 40%' },
-        }
+        },
       },
 
       animation: {
@@ -103,7 +111,7 @@ module.exports = {
         h3_blurAnimation: 'blurAnimation .8s ease-in-out .3s 1 forwards',
         text_blurAnimation: 'blurAnimation .8s ease-in-out .6s 1 forwards',
         mainPhoto: 'mainPhoto 5s ease-in-out 4s infinite',
-      }
+      },
     },
   },
   // plugins: [require('@tailwindcss/forms')],

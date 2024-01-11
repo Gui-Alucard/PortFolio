@@ -1,37 +1,28 @@
-import Image from "next/image"
-
-import logo from '@/assets/logo.svg'
-
 export default function Home() {
   // const url = require('@/assets/intro.mp4')
 
   return (
-    <div className="flex flex-col-reverse items-center justify-center h-screen md:flex-row">
-      {/* Header */}
-      <a href="" className="absolute top-2 left-2 items-center gap-3">
-        <div className="flex items-center justify-start ml-4 w-[230px] md:w-[420px] sm:w-[340px]">
-          <Image src={logo} alt="logo" className="drop-shadow-home h-12 w-16 md:h-20 md:w-28 sm:h-14 sm:w-20" />
-          <span className="w-fit ml-6 md:text-4xl sm:text-3xl text-xl drop-shadow-home font-bold text-purple-logo">
-            &lt; <span className="font-orbitron md:text-3xl sm:text-2xl text-purple-50 font-bold">G.O DEV</span>/&gt;
-          </span>
-        </div>
-      </a>
-
+    <div className="flex h-screen max-w-1920 flex-col-reverse items-center justify-center md:flex-row">
       {/* Left - Top */}
-      <div className="flex flex-wrap flex-col w-[360px] mt-8 md:px-14 md:w-[768px] sm:w-[480px]">
-        <h1 className="flex items-center justify-start py-2 font-bold text-3xl md:text-3xl xl:text-7xl animate-h1_blurAnimation font-alt">Guilherme Oliveira</h1>
-        <span className="flex items-center justify-start py-2 font-bold text-2xl md:text-2xl xl:text-5xl animate-h3_blurAnimation -z-0">
-          <span className="font-orbitron text-purple-600 animate-pulse">Full-Stack Developer</span>
+      <div className="mt-8 flex w-[360px] flex-col flex-wrap sm:w-[480px] md:w-[768px] md:px-14">
+        <h1 className="flex animate-h1_blurAnimation items-center justify-start py-2 font-alt text-3xl font-bold md:text-3xl xl:text-7xl">
+          Guilherme Oliveira
+        </h1>
+        <span className="-z-0 flex animate-h3_blurAnimation items-center justify-start py-2 text-2xl font-bold md:text-2xl xl:text-5xl">
+          <span className="animate-pulse font-orbitron text-purple-600">
+            Full-Stack Developer
+          </span>
         </span>
-        <p className="text-left md:text-justify leading-relaxed py-2 animate-text_blurAnimation text-lg text-gray-50">
-          Hi. I{"'"}m a brazilian developer who really look forward to making a solid contribution. Hope to make you enjoy my portfolio.
+        <p className="animate-text_blurAnimation py-2 text-left text-lg leading-relaxed text-gray-50 md:text-justify">
+          Hi. I{"'"}m a brazilian developer who really look forward to making a
+          solid contribution. Hope to make you enjoy my portfolio.
         </p>
       </div>
 
       {/* Right - Bottom */}
-      <div className="flex flex-col w-[360px] h-[360px] items-center justify-center md:w-[768px] sm:w-[460px] sm:h-[420px] sm:mt-4">
-        <div className="flex items-center justify-center h-screen">
-          <div className="border-purple-logo border bg-[url(../assets/main-photo.png)] bg-cover bg-center drop-shadow-main-photo animate-mainPhoto transition-all ease-in-out delay-150 h-[280px] w-[280px] xl:h-[480px] xl:w-[480px] sm:h-[360px] sm:w-[360px]" />
+      <div className="flex h-[360px] w-[360px] flex-col items-center justify-center sm:mt-4 sm:h-[420px] sm:w-[460px] md:w-[768px]">
+        <div className="flex h-screen items-center justify-center">
+          <div className="h-[280px] w-[280px] animate-mainPhoto border border-purple-logo bg-[url(../assets/main-photo.png)] bg-cover bg-center drop-shadow-main-photo transition-all delay-150 ease-in-out sm:h-[360px] sm:w-[360px] xl:h-[480px] xl:w-[480px]" />
         </div>
       </div>
 
@@ -43,6 +34,6 @@ export default function Home() {
         >
           <source type="video/mp4" src={url}/>
         </video> */}
-    </div >
+    </div>
   )
 }

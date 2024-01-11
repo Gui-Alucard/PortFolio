@@ -1,0 +1,3 @@
+{
+    "ignorePatterns": ["node_modules", "**/next/**", "**/.next/**", "**/_next/**", "**/dist/**", "**/__tmp__/**", "lerna.json", ".github"],
+}
