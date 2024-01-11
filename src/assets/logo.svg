@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375.87 148.66">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke: #8246ff;
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        stroke-miterlimit: 100;
+      }
+
+      .cls-4 {
+        fill: #8246ff;
+      }
+    </style>
+    <clipPath id="clippath">
+      <polygon class="cls-2" points="0 148.66 375.87 148.66 198.75 0 0 148.66"/>
+    </clipPath>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g class="cls-5">
+      <g>
+        <circle class="cls-1" cx="241.33" cy="84.92" r="7.08"/>
+        <polyline class="cls-3" points="235.13 81.34 210.58 67.17 237.1 57.48 280.53 93.92 210.87 142.67 198.54 1.46 372.19 147.21 3.69 147.21"/>
+        <polygon class="cls-4" points="3.68 147.2 198.54 1.46 211.15 147.2 3.68 147.2"/>
+      </g>
+    </g>
+  </g>
+</svg>
