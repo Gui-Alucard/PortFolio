@@ -8,10 +8,14 @@ import {
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { ReactNode, useCallback, useEffect, useMemo, useState } from 'react'
 import { loadFull } from 'tsparticles'
-import ParticlesConfig from './particlesConfig'
+import ParticlesConfig from './particles.config'
+import { useTheme } from 'next-themes'
+import { IColors } from '@/interfaces/particles.interface'
+import { COLORS } from '@/themes/colors'
 
 const ParticlesComponent = ({ children }: { children: ReactNode }) => {
   const [init, setInit] = useState<boolean>(false)
+  const { theme } = useTheme()
 
   useEffect(() => {
     initParticlesEngine(async (engine: Engine) => {
@@ -29,8 +33,12 @@ const ParticlesComponent = ({ children }: { children: ReactNode }) => {
   )
 
   const options: ISourceOptions = useMemo(() => {
-    return ParticlesConfig
-  }, [])
+    const colors: IColors = {
+      particles: theme === 'light' ? COLORS.purple[900] : COLORS.logo,
+      links: theme === 'light' ? COLORS.purple[900] : COLORS.purple[400],
+    }
+    return ParticlesConfig(colors)
+  }, [theme])
 
   return (
     <>

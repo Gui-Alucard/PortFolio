@@ -1,0 +1,17 @@
+{
+  "NAVBAR": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact"
+  },
+  "HOME_PAGE": {
+      "TITLE": "Full-Stack Developer",
+      "SUMMARY": "Hi 👋🏼. I'm a brazilian developer who really look forward to making a solid contribution. Hope to make you enjoy my portfolio."
+  },
+  "TOOLTIP": {
+      "COLOR_MODE": "Switch between dark or light modes",
+      "TRANSLATE": "Switch between English and Brazilian Portuguese"
+  }
+
+}

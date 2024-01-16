@@ -7,17 +7,13 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { FaBars, FaXmark } from 'react-icons/fa6'
-import { VscColorMode } from 'react-icons/vsc'
 import { ILink } from './navbar.interface'
-
-const links: ILink[] = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'About', href: '/about', current: false },
-  { name: 'Projects', href: '/projects', current: false },
-  { name: 'Contact', href: '/contact', current: false },
-]
+import { ThemeSwitcher } from '../ThemeSwitcher'
+import { useTranslator } from '@/global/translate/Translator.context'
+import { TranslatorSwitcher } from '../TranslatorSwitcher'
 
 function renderLinks(
+  links: ILink[],
   textSize: string,
   pathname: string,
   toggleMenu: () => void,
@@ -29,9 +25,9 @@ function renderLinks(
         href={link.href}
         onClick={toggleMenu}
         className={clsx(
-          `block rounded-md px-3 py-2 text-purple-50 hover:text-purple-logo md:${textSize} font-alt font-medium transition duration-300`,
+          `block rounded-md px-3 py-2 text-purple-logo hover:text-purple-900 dark:text-purple-50 dark:hover:text-purple-logo md:${textSize} font-alt font-medium transition duration-300`,
           {
-            'text-purple-logo': pathname === link.href,
+            'text-purple-900 dark:text-purple-logo': pathname === link.href,
           },
         )}
       >
@@ -43,12 +39,19 @@ function renderLinks(
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
-
   const pathname = usePathname()
 
+  const { locale, translate } = useTranslator()
+  const NAVBAR = translate[locale].NAVBAR
+
   const toggleMenu = () => setIsOpen(!isOpen)
-  const toggleDarkMode = () => setIsDarkMode(!isDarkMode)
+
+  const links: ILink[] = [
+    { name: NAVBAR.HOME, href: '/', current: true },
+    { name: NAVBAR.ABOUT, href: '/about', current: false },
+    { name: NAVBAR.PROJECTS, href: '/projects', current: false },
+    { name: NAVBAR.CONTACT, href: '/contact', current: false },
+  ]
 
   return (
     <>
@@ -59,7 +62,7 @@ export default function NavBar() {
               {/* <!-- Mobile menu button--> */}
               <button
                 type="button"
-                className="relative inline-flex items-center justify-center rounded-md p-1 text-purple-400 hover:text-purple-50 focus:outline-none focus:ring-1 focus:ring-purple-900 focus:ring-offset-2 focus:ring-offset-purple-800"
+                className="relative inline-flex items-center justify-center rounded-md p-1 text-purple-700 hover:text-purple-900 focus:outline-none focus:ring-1 focus:ring-purple-900 focus:ring-offset-2 focus:ring-offset-purple-800 dark:text-purple-400 dark:hover:text-purple-50"
               >
                 {!isOpen ? (
                   <FaBars
@@ -79,29 +82,21 @@ export default function NavBar() {
                 <Image
                   src={logo}
                   alt="logo"
-                  className="mr-1 h-8 w-auto drop-shadow-home sm:h-10 md:h-12"
+                  className="mt-2 h-5 w-auto min-w-20 drop-shadow-home sm:h-6 md:h-8"
                 />
               </Link>
-              <div className="hidden sm:ml-8 sm:block md:ml-12">
+              <div className="hidden sm:ml-8 sm:block md:ml-10">
                 <div className="flex space-x-4">
-                  {renderLinks('text-3xl', pathname, toggleMenu)}
+                  {renderLinks(links, 'text-3xl', pathname, toggleMenu)}
                 </div>
               </div>
             </div>
 
-            {/* <!-- DARK MODE ---> */}
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button
-                type="button"
-                className="relative rounded-full p-1 text-purple-400 hover:text-purple-50 focus:outline-none focus:ring-1 focus:ring-purple-900 focus:ring-offset-2 focus:ring-offset-purple-800"
-              >
-                <VscColorMode
-                  onClick={toggleDarkMode}
-                  className={`${
-                    isDarkMode ? 'rotate-180' : 'rotate-0'
-                  } h-5 w-auto drop-shadow-home sm:h-6`}
-                />
-              </button>
+            <div className="flex flex-row md:mt-16 md:flex-col md:space-y-4">
+              {/* <!-- DARK MODE ---> */}
+              <ThemeSwitcher />
+              {/* <!-- TRANSLATOR ---> */}
+              <TranslatorSwitcher />
             </div>
           </div>
         </div>
@@ -109,8 +104,8 @@ export default function NavBar() {
         {/* <!-- Mobile menu, show/hide based on menu state. --> */}
         <div className="sm:hidden" id="mobile-menu">
           {isOpen && (
-            <div className="space-y-1 bg-gray-600 px-2 pb-4 pt-4">
-              {renderLinks('text-xl', pathname, toggleMenu)}
+            <div className="space-y-1 bg-purple-50 px-2 pb-4 pt-4 dark:bg-gray-600">
+              {renderLinks(links, 'text-xl', pathname, toggleMenu)}
             </div>
           )}
         </div>

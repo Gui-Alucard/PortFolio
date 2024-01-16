@@ -2,14 +2,17 @@
 import { ReactNode } from 'react'
 
 import NavBar from '@/components/Header/NavBar'
-import ParticlesComponent from '@/components/particles/Particles'
+import ParticlesComponent from '@/components/Particles/Particles'
+import { ThemeProvider } from './theme-provider'
 
 import {
   Bai_Jamjuree as BaiJamjuree,
   Orbitron,
   Roboto_Flex as Roboto,
 } from 'next/font/google'
+
 import './globals.css'
+import { TranslatorProvider } from '@/global/translate/Translator.context'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -30,7 +33,7 @@ const orbitron = Orbitron({
 export const metadata = {
   title: 'G.O DEV',
   description:
-    'Portfolio de Guilherme Oliveira construído com React, Next.js, TailwindCSS e TypeScript.',
+    "Guilherme Oliveira's Portfolio buitted with React, Next.js, TailwindCSS and TypeScript.",
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -39,14 +42,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${baiJamjuree.variable} ${orbitron.variable} bg-gray-600 font-sans text-purple-50`}
+        className={`${roboto.variable} ${baiJamjuree.variable} ${orbitron.variable} bg-purple-50 font-sans text-purple-900 duration-500 dark:bg-gray-600 dark:text-purple-50`}
       >
-        <ParticlesComponent>
-          <header className="fixed left-0 top-0 z-10 w-screen">
-            <NavBar />
-          </header>
-          <main className="z-1 relative">{children}</main>
-        </ParticlesComponent>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ParticlesComponent>
+            <TranslatorProvider>
+              <header className="fixed left-0 top-0 z-10 w-screen">
+                <NavBar />
+              </header>
+              <main className="z-1 relative">{children}</main>
+            </TranslatorProvider>
+          </ParticlesComponent>
+        </ThemeProvider>
       </body>
     </html>
   )

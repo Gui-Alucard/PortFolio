@@ -5,6 +5,7 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -50,6 +51,7 @@ module.exports = {
           700: '#b54129',
           800: '#8c3320',
           900: '#6b2718',
+          logo: '#8246ff',
         },
         yellow: {
           50: '#fff9ec',
@@ -62,6 +64,7 @@ module.exports = {
           700: '#b5882d',
           800: '#8c6923',
           900: '#6b501b',
+          logo: '#8246ff',
         },
         green: {
           50: '#e6fbef',
@@ -74,6 +77,7 @@ module.exports = {
           700: '#039645',
           800: '#027435',
           900: '#025929',
+          logo: '#8246ff',
         },
       },
 
@@ -83,6 +87,10 @@ module.exports = {
 
       maxWidth: {
         '1920': '120rem',
+      },
+
+      screens: {
+        '1080': '1080px',
       },
 
       dropShadow: {
@@ -104,13 +112,24 @@ module.exports = {
           '50%': { 'border-radius': '30% 60% 70% 40%/50% 60% 30% 60%' },
           '100%': { 'border-radius': '60% 40% 30% 70%/60% 30% 70% 40%' },
         },
+        slideLeftAndFade: {
+          from: { opacity: 0, transform: 'translateX(16px)' },
+          to: { opacity: 1, transform: 'translateX(0)' },
+        },
+        slideUpAndFade: {
+          from: { opacity: 0, transform: 'translateY(16px)' },
+          to: { opacity: 1, transform: 'translateY(0)' },
+        },
       },
 
       animation: {
         h1_blurAnimation: 'blurAnimation .8s ease-in-out 1 forwards',
         h3_blurAnimation: 'blurAnimation .8s ease-in-out .3s 1 forwards',
         text_blurAnimation: 'blurAnimation .8s ease-in-out .6s 1 forwards',
-        mainPhoto: 'mainPhoto 5s ease-in-out 4s infinite',
+        mainPhoto: 'mainPhoto 5s ease-in-out 5s infinite',
+        slideLeftAndFade:
+          'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        slideUpAndFade: 'slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },

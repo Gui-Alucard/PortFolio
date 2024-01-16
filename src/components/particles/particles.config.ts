@@ -1,7 +1,9 @@
-import { COLORS } from '@/themes/colors'
+import { IColors } from '@/interfaces/particles.interface'
 import { type ISourceOptions } from '@tsparticles/engine'
 
-const ParticlesConfig: ISourceOptions = {
+const ParticlesConfig: (colors: IColors) => ISourceOptions = (
+  colors: IColors,
+) => ({
   background: {
     color: {
       value: 'transparent',
@@ -32,10 +34,10 @@ const ParticlesConfig: ISourceOptions = {
   particles: {
     reduceDuplicates: true,
     color: {
-      value: COLORS.logo,
+      value: colors.particles,
     },
     links: {
-      color: COLORS.purple[400],
+      color: colors.links,
       distance: 140,
       enable: true,
       opacity: 0.4,
@@ -74,6 +76,6 @@ const ParticlesConfig: ISourceOptions = {
     position: 'absolute',
   },
   detectRetina: true,
-}
+})
 
 export default ParticlesConfig

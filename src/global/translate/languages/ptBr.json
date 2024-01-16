@@ -1,0 +1,16 @@
+{
+  "NAVBAR": {
+    "HOME": "Início",
+    "ABOUT": "Sobre",
+    "PROJECTS": "Projetos",
+    "CONTACT": "Contato"
+  },
+  "HOME_PAGE": {
+    "TITLE": "Desenvolvedor Full-Stack",
+    "SUMMARY": "Oi 👋🏼.  Eu sou um desenvolvedor que realmente quer fazer uma contribuição sólida e positiva. Espero que goste do meu portfólio."
+  },
+  "TOOLTIP": {
+    "COLOR_MODE": "Intercale entre os modos escuro ou claro",
+    "TRANSLATE": "Intercale entre Inglês e Português do Brasil"
+  }
+}
