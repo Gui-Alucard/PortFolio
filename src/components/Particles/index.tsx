@@ -11,7 +11,7 @@ import { loadFull } from 'tsparticles'
 
 import { useTheme } from 'next-themes'
 
-import particlesOptions from '@/components/Particles/particles.options'
+import particlesOptions from '@/themes/particles.options'
 
 import { IColors } from '@/interfaces/particles.interface'
 import { COLORS } from '@/themes/colors'

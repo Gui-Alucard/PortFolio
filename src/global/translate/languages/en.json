@@ -6,6 +6,8 @@
     "CONTACT": "Contact"
   },
   "HOME_PAGE": {
+      "SPLASH_TITLE": "Loading...",
+      "SPLASH_MESSAGE": "Hopefully not for too long 🥹",
       "TITLE": "Full-Stack Developer",
       "SUMMARY": "Hi 👋🏼. I'm a brazilian developer who really look forward to making a solid contribution. Hope to make you enjoy my portfolio."
   },

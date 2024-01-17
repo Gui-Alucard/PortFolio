@@ -1,9 +1,7 @@
-'use client'
-
 import Image from 'next/image'
 import mainPic from '@/assets/main-picture.jpg'
 
-export default function AnimatedPhoto() {
+export default async function AnimatedPhoto() {
   return (
     <div className="mb-4 flex h-[360px] w-[360px] flex-col items-center justify-center sm:mb-0 sm:mt-4 sm:h-[420px] sm:w-[460px] sm:px-14 md:w-[768px]">
       <div className="flex h-screen items-center justify-center">
