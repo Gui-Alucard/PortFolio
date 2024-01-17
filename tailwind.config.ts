@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/assets/**/*.{jpg,svg}',
   ],
   darkMode: 'class',
   theme: {
@@ -40,57 +42,10 @@ module.exports = {
           900: '#372560',
           logo: '#8246ff',
         },
-        orange: {
-          50: '#ffefeb',
-          100: '#ffccc2',
-          200: '#ffb4a4',
-          300: '#ff927b',
-          400: '#ff7d61',
-          500: '#ff5c3a',
-          600: '#e85435',
-          700: '#b54129',
-          800: '#8c3320',
-          900: '#6b2718',
-          logo: '#8246ff',
-        },
-        yellow: {
-          50: '#fff9ec',
-          100: '#ffebc4',
-          200: '#ffe2a7',
-          300: '#ffd47f',
-          400: '#ffcc66',
-          500: '#ffbf40',
-          600: '#e8ae3a',
-          700: '#b5882d',
-          800: '#8c6923',
-          900: '#6b501b',
-          logo: '#8246ff',
-        },
-        green: {
-          50: '#e6fbef',
-          100: '#b1f1ce',
-          200: '#8cebb6',
-          300: '#57e295',
-          400: '#36dc81',
-          500: '#04d361',
-          600: '#04c058',
-          700: '#039645',
-          800: '#027435',
-          900: '#025929',
-          logo: '#8246ff',
-        },
       },
 
       fontSize: {
         '5xl': '2.5rem',
-      },
-
-      maxWidth: {
-        '1920': '120rem',
-      },
-
-      screens: {
-        '1080': '1080px',
       },
 
       dropShadow: {
@@ -123,10 +78,10 @@ module.exports = {
       },
 
       animation: {
-        h1_blurAnimation: 'blurAnimation .8s ease-in-out 1 forwards',
-        h3_blurAnimation: 'blurAnimation .8s ease-in-out .3s 1 forwards',
-        text_blurAnimation: 'blurAnimation .8s ease-in-out .6s 1 forwards',
-        mainPhoto: 'mainPhoto 5s ease-in-out 5s infinite',
+        h1_entry: 'blurAnimation .9s ease-in-out 1 forwards',
+        h3_entry: 'blurAnimation .9s ease-in-out .4s 1 forwards',
+        text_entry: 'blurAnimation .9s ease-in-out .8s 1 forwards',
+        mainPhoto: 'mainPhoto 5s ease-in-out infinite',
         slideLeftAndFade:
           'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         slideUpAndFade: 'slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',

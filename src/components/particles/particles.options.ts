@@ -1,7 +1,9 @@
+'use client'
+
 import { IColors } from '@/interfaces/particles.interface'
 import { type ISourceOptions } from '@tsparticles/engine'
 
-export function particlesOptions(colors: IColors): ISourceOptions {
+export default function particlesOptions(colors: IColors): ISourceOptions {
   return {
     background: {
       color: {

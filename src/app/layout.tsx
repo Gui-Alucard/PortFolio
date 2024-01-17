@@ -1,9 +1,8 @@
-// import { cookies } from 'next/headers'
 import { ReactNode } from 'react'
-
-import NavBar from '@/components/Header/NavBar'
-import ParticlesComponent from '@/components/Particles/Particles'
+import dynamic from 'next/dynamic'
 import { ThemeProvider } from './theme-provider'
+
+import Header from '@/components/Header'
 
 import {
   Bai_Jamjuree as BaiJamjuree,
@@ -13,6 +12,10 @@ import {
 
 import './globals.css'
 import { TranslatorProvider } from '@/global/translate/Translator.context'
+
+const ParticlesComponent = dynamic(() => import('@/components/Particles'), {
+  loading: () => null,
+})
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -37,8 +40,6 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  // const isAuthenticated = cookies().has('token')
-
   return (
     <html lang="en">
       <body
@@ -48,7 +49,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <ParticlesComponent>
             <TranslatorProvider>
               <header className="fixed left-0 top-0 z-10 w-screen">
-                <NavBar />
+                <Header />
               </header>
               <main className="z-1 relative">{children}</main>
             </TranslatorProvider>
