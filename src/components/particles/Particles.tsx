@@ -8,7 +8,7 @@ import {
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { ReactNode, useCallback, useEffect, useMemo, useState } from 'react'
 import { loadFull } from 'tsparticles'
-import ParticlesConfig from './particles.config'
+import { particlesOptions } from './particles.options'
 import { useTheme } from 'next-themes'
 import { IColors } from '@/interfaces/particles.interface'
 import { COLORS } from '@/themes/colors'
@@ -37,7 +37,7 @@ const ParticlesComponent = ({ children }: { children: ReactNode }) => {
       particles: theme === 'light' ? COLORS.purple[900] : COLORS.logo,
       links: theme === 'light' ? COLORS.purple[900] : COLORS.purple[400],
     }
-    return ParticlesConfig(colors)
+    return particlesOptions(colors)
   }, [theme])
 
   return (
