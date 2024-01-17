@@ -26,7 +26,7 @@ export default function Home() {
               {TEXT.TITLE}
             </span>
           </span>
-          <p className="animate-text_entry py-2 text-left text-lg leading-relaxed text-purple-900 md:text-justify dark:text-gray-50">
+          <p className="animate-text_entry py-2 text-left text-lg leading-relaxed text-purple-900 dark:text-gray-50 md:text-justify">
             {TEXT.SUMMARY}
           </p>
         </div>
