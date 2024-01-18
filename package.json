@@ -40,6 +40,8 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
+    "*.tsx": "eslint --cache --fix",
+    "*.ts": "eslint --cache --fix",
+    "*.{md,html,css}": "prettier --write"
   }
 }
