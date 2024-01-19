@@ -15,6 +15,7 @@ import particlesOptions from '@/themes/particles.options'
 
 import { IColors } from '@/interfaces/particles.interface'
 import { COLORS } from '@/themes/colors'
+import { usePathname } from 'next/navigation'
 
 export default function ParticlesComponent({
   children,
@@ -22,6 +23,7 @@ export default function ParticlesComponent({
   children: ReactNode
 }) {
   const [init, setInit] = useState<boolean>(false)
+  const pathname = usePathname()
   const { theme } = useTheme()
 
   useEffect(() => {
@@ -50,7 +52,13 @@ export default function ParticlesComponent({
   return (
     <>
       {init ? (
-        <div className="max-h-screen overflow-y-scroll">
+        <div
+          className={
+            pathname === '/'
+              ? 'max-h-screen overflow-y-scroll'
+              : 'max-h-full overflow-y-scroll'
+          }
+        >
           <Particles particlesLoaded={particlesLoaded} options={options} />
           {children}
         </div>

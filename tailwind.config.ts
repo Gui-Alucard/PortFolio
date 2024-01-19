@@ -52,23 +52,11 @@ module.exports = {
         home: '0 0 1rem rgba(129, 70, 255, 0.8)',
       },
 
+      screens: {
+        portrait: { raw: '(min-height: 530px)' },
+      },
+
       keyframes: {
-        blurAnimation: {
-          from: {
-            transform: 'translate(0, 120px)',
-            filter: 'blur(33px)',
-            opacity: '0',
-          },
-          to: { transform: 'translate(0)', filter: 'blur(0)', opacity: '1' },
-        },
-        mainPhotoEntry: {
-          from: {
-            transform: 'translate(0, -120px)',
-            filter: 'blur(33px)',
-            opacity: '0',
-          },
-          to: { transform: 'translate(0)', filter: 'blur(0)', opacity: '1' },
-        },
         mainPhoto: {
           '0%': { 'border-radius': '60% 40% 30% 70%/60% 30% 70% 40%' },
           '50%': { 'border-radius': '30% 60% 70% 40%/50% 60% 30% 60%' },
@@ -85,10 +73,6 @@ module.exports = {
       },
 
       animation: {
-        h1_entry: 'blurAnimation .9s ease-in-out 1 forwards',
-        h3_entry: 'blurAnimation .9s ease-in-out .4s 1 forwards',
-        text_entry: 'blurAnimation .9s ease-in-out .8s 1 forwards',
-        main_photo_entry: 'mainPhotoEntry .9s ease-in-out 1 forwards',
         mainPhoto: 'mainPhoto 5s ease-in-out infinite',
         slideLeftAndFade:
           'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',

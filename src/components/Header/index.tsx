@@ -11,6 +11,7 @@ import { ILink } from '../../interfaces/navbar.interface'
 import { ThemeSwitcher } from '../ThemeSwitcher'
 import { useTranslator } from '@/global/translate/Translator.context'
 import { TranslatorSwitcher } from '../TranslatorSwitcher'
+import { motion, AnimatePresence } from 'framer-motion'
 
 function renderLinks(links: ILink[], pathname: string, toggleMenu: () => void) {
   return links.map((link: ILink) => {
@@ -20,7 +21,7 @@ function renderLinks(links: ILink[], pathname: string, toggleMenu: () => void) {
         href={link.href}
         onClick={toggleMenu}
         className={clsx(
-          'block rounded-md p-3 font-alt font-medium text-purple-logo transition duration-300 hover:text-purple-900 dark:text-purple-50 dark:hover:text-purple-logo',
+          'block rounded-md p-3 font-alt font-medium text-purple-logo transition duration-300 hover:text-purple-900 focus:outline-none dark:text-purple-50 dark:hover:text-purple-logo',
           {
             'text-purple-900 dark:text-purple-logo': pathname === link.href,
           },
@@ -48,36 +49,47 @@ export default function Header() {
     { name: NAVBAR.CONTACT, href: '/contact', current: false },
   ]
 
+  const variants = {
+    hidden: { y: -15, opacity: 0 },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+  }
+
   return (
-    <>
-      <nav>
-        <div className="mx-auto max-w-[120rem] p-4 sm:p-6 lg:p-8">
+    <AnimatePresence mode="wait">
+      <motion.nav variants={variants} initial="hidden" animate="show">
+        <div className="mx-auto max-w-[120rem] p-4 backdrop-blur-md sm:p-6 md:backdrop-blur-none lg:p-8">
           <div className="relative flex h-16 items-center justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
               {/* <!-- Mobile menu button--> */}
               <button
                 type="button"
-                className="relative z-10 inline-flex items-center justify-center rounded-md p-2 text-purple-700 hover:text-purple-900 focus:outline-none focus:ring-1 focus:ring-purple-900 focus:ring-offset-2 focus:ring-offset-purple-800 dark:text-purple-400 dark:hover:text-purple-50"
+                className="relative z-10 inline-flex items-center justify-center rounded-md p-2 text-purple-700 hover:text-purple-900 focus:outline-none dark:text-purple-400 dark:hover:text-purple-50"
               >
                 {!isOpen ? (
                   <FaBars
                     onClick={toggleMenu}
-                    className="block h-10 w-auto drop-shadow-home"
+                    className="block h-8 w-auto drop-shadow-home"
                   />
                 ) : (
                   <FaXmark
                     onClick={toggleMenu}
-                    className="block h-10 w-auto drop-shadow-home"
+                    className="block h-8 w-auto drop-shadow-home"
                   />
                 )}
               </button>
             </div>
-            <div className="absolute inset-y-0 left-0 right-0 flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+            <div className="absolute inset-y-0 left-0 right-0 flex flex-1 items-center justify-center focus:outline-none md:items-stretch md:justify-start">
               <Link key="home" href="/">
                 <Image
                   src={logo}
                   alt="logo"
-                  className="h-11 w-auto min-w-20 drop-shadow-home md:h-12"
+                  className="h-9 w-auto min-w-20 drop-shadow-home focus:outline-none md:h-12"
                 />
               </Link>
               <div className="hidden md:ml-8 md:block">
@@ -104,7 +116,7 @@ export default function Header() {
             </div>
           )}
         </div>
-      </nav>
-    </>
+      </motion.nav>
+    </AnimatePresence>
   )
 }
