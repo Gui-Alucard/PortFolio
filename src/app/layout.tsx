@@ -48,10 +48,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ParticlesComponent>
             <TranslatorProvider>
-              <header className="fixed left-0 top-0 z-10 w-screen">
+              <header>
                 <Header />
               </header>
-              <main className="z-1 relative">{children}</main>
+              <main className="z-1 relative flex h-screen items-start justify-center sm:items-center">
+                {children}
+              </main>
             </TranslatorProvider>
           </ParticlesComponent>
         </ThemeProvider>

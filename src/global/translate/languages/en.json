@@ -8,7 +8,9 @@
   "HOME_PAGE": {
       "SPLASH_TITLE": "Loading...",
       "SPLASH_MESSAGE": "Hopefully not for too long 🥹",
-      "TITLE": "Full-Stack Developer",
+      "TITLE": "Developer",
+      "STACK_ONE": "Front-End",
+      "STACK_TWO": "Back-End",
       "SUMMARY": "Hi 👋🏼. I'm a brazilian developer who really look forward to making a solid contribution. Hope to make you enjoy my portfolio."
   },
   "TOOLTIP": {

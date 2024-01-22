@@ -52,19 +52,11 @@ module.exports = {
         home: '0 0 1rem rgba(129, 70, 255, 0.8)',
       },
 
-      screens: {
-        portrait: { raw: '(min-height: 530px)' },
-      },
-
       keyframes: {
         mainPhoto: {
           '0%': { 'border-radius': '60% 40% 30% 70%/60% 30% 70% 40%' },
           '50%': { 'border-radius': '30% 60% 70% 40%/50% 60% 30% 60%' },
           '100%': { 'border-radius': '60% 40% 30% 70%/60% 30% 70% 40%' },
-        },
-        slideLeftAndFade: {
-          from: { opacity: 0, transform: 'translateX(16px)' },
-          to: { opacity: 1, transform: 'translateX(0)' },
         },
         slideUpAndFade: {
           from: { opacity: 0, transform: 'translateY(16px)' },
@@ -74,11 +66,8 @@ module.exports = {
 
       animation: {
         mainPhoto: 'mainPhoto 5s ease-in-out infinite',
-        slideLeftAndFade:
-          'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         slideUpAndFade: 'slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },
-  // plugins: [require('@tailwindcss/forms')],
 }

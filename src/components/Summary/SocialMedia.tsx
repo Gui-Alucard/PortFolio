@@ -7,14 +7,13 @@ import { SocialMediaEnum } from './socialmedia.enum'
 export default function SocialMedia({ name }: { name: SocialMediaEnum }) {
   return (
     <AnimatePresence>
-      <motion.span
+      <motion.div
         whileHover={{
-          scale: 1.1,
+          scale: 1.2,
           backgroundColor: `${name === SocialMediaEnum.GITHUB ? '#181717' : '#2867B2'}`,
-          border: `${name === SocialMediaEnum.GITHUB ? '1px solid #181717' : '1px solid #2867B2'}`,
         }}
-        transition={{ type: 'spring', stiffness: 100 }}
-        className="flex h-fit w-fit items-center justify-start rounded-full border border-purple-logo p-2 text-purple-700 transition-colors delay-100 hover:text-purple-900 focus:outline-none dark:text-purple-400 dark:hover:text-purple-50"
+        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+        className="flex h-fit w-fit items-center justify-start rounded-full border border-purple-logo p-2 text-purple-700 hover:border-none hover:text-purple-50 focus:outline-none dark:text-purple-400 dark:hover:text-purple-50"
       >
         <Link
           key={name}
@@ -31,7 +30,7 @@ export default function SocialMedia({ name }: { name: SocialMediaEnum }) {
             <FaLinkedinIn className="h-5 w-auto md:h-7" />
           )}
         </Link>
-      </motion.span>
+      </motion.div>
     </AnimatePresence>
   )
 }

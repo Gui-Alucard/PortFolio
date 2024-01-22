@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import logo from '@/assets/logo.svg'
-import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -12,6 +11,9 @@ import { ThemeSwitcher } from '../ThemeSwitcher'
 import { useTranslator } from '@/global/translate/Translator.context'
 import { TranslatorSwitcher } from '../TranslatorSwitcher'
 import { motion, AnimatePresence } from 'framer-motion'
+import { fadeIn } from '@/themes/variants'
+import { VariantsEnum } from '@/themes/variants.enum'
+import clsx from 'clsx'
 
 function renderLinks(links: ILink[], pathname: string, toggleMenu: () => void) {
   return links.map((link: ILink) => {
@@ -21,13 +23,13 @@ function renderLinks(links: ILink[], pathname: string, toggleMenu: () => void) {
         href={link.href}
         onClick={toggleMenu}
         className={clsx(
-          'block rounded-md p-3 font-alt font-medium text-purple-logo transition duration-300 hover:text-purple-900 focus:outline-none dark:text-purple-50 dark:hover:text-purple-logo',
+          'block rounded-md p-2 font-alt font-medium text-purple-logo transition duration-300 hover:bg-purple-400/20 hover:text-purple-900 focus:outline-none dark:text-purple-50 dark:hover:text-purple-logo md:hover:bg-transparent',
           {
             'text-purple-900 dark:text-purple-logo': pathname === link.href,
           },
         )}
       >
-        <p className="block text-lg md:text-2xl lg:text-3xl">{link.name}</p>
+        <p className="block text-lg md:text-3xl">{link.name}</p>
       </Link>
     )
   })
@@ -49,42 +51,48 @@ export default function Header() {
     { name: NAVBAR.CONTACT, href: '/contact', current: false },
   ]
 
-  const variants = {
-    hidden: { y: -15, opacity: 0 },
-    show: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-      },
-    },
-  }
-
   return (
     <AnimatePresence mode="wait">
-      <motion.nav variants={variants} initial="hidden" animate="show">
-        <div className="mx-auto max-w-[120rem] p-4 backdrop-blur-md sm:p-6 md:backdrop-blur-none lg:p-8">
-          <div className="relative flex h-16 items-center justify-between">
-            <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
+      <motion.nav
+        variants={fadeIn(VariantsEnum.UP, 0.2)}
+        initial="hidden"
+        animate="show"
+        id="menu-container"
+        className="fixed bottom-2 z-10 h-fit w-screen overflow-hidden md:bottom-0 md:left-0 md:top-4"
+      >
+        {/* <!-- Mobile menu, show/hide based on menu state --> */}
+        <div
+          className="flex items-center justify-center md:hidden"
+          id="menu-mobile"
+        >
+          {isOpen && (
+            <div className="max-w-96 flex-grow space-y-2 rounded-lg bg-purple-100/20 p-2 backdrop-blur-2xl dark:bg-purple-900/20">
+              {renderLinks(links, pathname, toggleMenu)}
+            </div>
+          )}
+        </div>
+        <div id="menu-inner" className="mx-auto max-w-96 p-4 pt-2">
+          <div className="flex h-16 w-full flex-row items-center justify-between rounded-full bg-purple-100/20 px-6 backdrop-blur-2xl dark:bg-purple-900/20 sm:p-6 md:rounded-none md:bg-transparent md:px-8 md:backdrop-blur-none dark:md:bg-transparent">
+            <div className="md:hidden">
               {/* <!-- Mobile menu button--> */}
               <button
                 type="button"
-                className="relative z-10 inline-flex items-center justify-center rounded-md p-2 text-purple-700 hover:text-purple-900 focus:outline-none dark:text-purple-400 dark:hover:text-purple-50"
+                className="flex items-center justify-center text-purple-700 hover:text-purple-900 focus:outline-none dark:text-purple-400 dark:hover:text-purple-50"
               >
                 {!isOpen ? (
                   <FaBars
                     onClick={toggleMenu}
-                    className="block h-8 w-auto drop-shadow-home"
+                    className="h-8 w-auto drop-shadow-home"
                   />
                 ) : (
                   <FaXmark
                     onClick={toggleMenu}
-                    className="block h-8 w-auto drop-shadow-home"
+                    className="h-8 w-auto drop-shadow-home"
                   />
                 )}
               </button>
             </div>
-            <div className="absolute inset-y-0 left-0 right-0 flex flex-1 items-center justify-center focus:outline-none md:items-stretch md:justify-start">
+            <div className="hidden md:absolute md:left-4 md:flex md:flex-1 md:items-stretch md:justify-start md:focus:outline-none">
               <Link key="home" href="/">
                 <Image
                   src={logo}
@@ -99,22 +107,11 @@ export default function Header() {
               </div>
             </div>
 
-            <div className="absolute inset-y-0 right-0 flex flex-row sm:mt-2 md:flex-col md:space-y-4">
-              {/* <!-- DARK MODE ---> */}
-              <ThemeSwitcher />
-              {/* <!-- TRANSLATOR ---> */}
-              <TranslatorSwitcher />
-            </div>
+            {/* <!-- DARK MODE ---> */}
+            <ThemeSwitcher />
+            {/* <!-- TRANSLATOR ---> */}
+            <TranslatorSwitcher />
           </div>
-        </div>
-
-        {/* <!-- Mobile menu, show/hide based on menu state. --> */}
-        <div className="md:hidden" id="mobile-menu">
-          {isOpen && (
-            <div className="space-y-2 bg-purple-50 px-2 py-4 dark:bg-gray-600">
-              {renderLinks(links, pathname, toggleMenu)}
-            </div>
-          )}
         </div>
       </motion.nav>
     </AnimatePresence>

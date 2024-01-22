@@ -20,11 +20,11 @@ export const ThemeSwitcher = () => {
   return (
     <>
       {mounted && (
-        <div className="absolute inset-y-0 right-12 flex items-center sm:static sm:inset-auto sm:right-0 sm:mr-2">
-          <Tooltiper content={TOOLTIP.COLOR_MODE} padding={78}>
+        <div className="md:absolute md:inset-y-0 md:right-14 md:m-4 md:h-fit">
+          <Tooltiper content={TOOLTIP.COLOR_MODE} padding={72}>
             <button
               type="button"
-              className="relative items-center justify-center rounded-full p-2 text-purple-700 hover:text-purple-900 focus:outline-none dark:text-purple-400 dark:hover:text-purple-50 md:transition-colors md:delay-200"
+              className="flex items-center justify-center text-purple-700 hover:text-purple-950 focus:outline-none dark:text-purple-400 dark:hover:text-purple-50 md:transition-colors md:delay-200"
             >
               <VscColorMode
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
