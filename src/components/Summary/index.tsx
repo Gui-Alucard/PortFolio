@@ -20,7 +20,7 @@ export default function Summary({ translate, locale }: ISummary) {
         Guilherme Oliveira
       </h1>
       <span
-        className={`${locale === EnumLanguages.en ? 'flex-col-reverse' : 'flex-col md:flex-row'} mt-6 flex font-orbitron text-lg font-bold text-purple-600 sm:text-xl md:mt-6 lg:text-3xl xl:text-5xl`}
+        className={`${locale === EnumLanguages.en ? 'flex-col-reverse' : 'flex-col md:flex-col'} mt-6 flex font-orbitron text-xl font-bold text-purple-600 sm:text-2xl md:mt-6 lg:text-4xl xl:text-5xl`}
       >
         {TEXT.TITLE}&nbsp;
         <TypeAnimator stackOne={TEXT.STACK_ONE} stackTwo={TEXT.STACK_TWO} />

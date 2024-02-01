@@ -17,7 +17,7 @@ export default function TypeAnimator({
       style={{
         display: 'block',
       }}
-      className="flex flex-1 font-orbitron text-lg font-bold text-purple-600 sm:text-xl lg:text-4xl xl:text-5xl"
+      className="flex flex-1 font-orbitron text-xl font-bold text-purple-600 sm:text-2xl lg:text-4xl xl:text-5xl"
     />
   )
 }

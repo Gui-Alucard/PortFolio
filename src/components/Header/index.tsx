@@ -18,19 +18,23 @@ import clsx from 'clsx'
 function renderLinks(links: ILink[], pathname: string, toggleMenu: () => void) {
   return links.map((link: ILink) => {
     return (
-      <Link
+      <div
         key={link.name}
-        href={link.href}
-        onClick={toggleMenu}
-        className={clsx(
-          'block rounded-md p-2 font-alt font-medium text-purple-logo transition duration-300 hover:bg-purple-400/20 hover:text-purple-900 focus:outline-none dark:text-purple-50 dark:hover:text-purple-logo md:hover:bg-transparent',
-          {
-            'text-purple-900 dark:text-purple-logo': pathname === link.href,
-          },
-        )}
+        className="block rounded-md p-2 transition duration-300 hover:bg-purple-400/20 focus:outline-none md:hover:bg-transparent"
       >
-        <p className="block text-lg md:text-3xl">{link.name}</p>
-      </Link>
+        <Link
+          href={link.href}
+          onClick={toggleMenu}
+          className={clsx(
+            'font-alt font-medium text-purple-logo transition duration-300 hover:text-purple-900 focus:outline-none dark:text-purple-50 dark:hover:text-purple-logo',
+            {
+              'text-purple-900 dark:text-purple-logo': pathname === link.href,
+            },
+          )}
+        >
+          <p className="block text-lg md:text-3xl">{link.name}</p>
+        </Link>
+      </div>
     )
   })
 }

@@ -1,13 +1,18 @@
-import Image from 'next/image'
-import mainPic from '@/assets/main-picture.jpg'
+import Image, { StaticImageData } from 'next/image'
 
-export default function AnimatedPhoto() {
+export default function AnimatedPhoto({
+  staticImage,
+  width,
+}: {
+  staticImage: StaticImageData
+  width?: string
+}) {
   return (
     <Image
-      src={mainPic}
+      src={staticImage}
       alt="picture of me"
       style={{
-        width: '70%',
+        width: width || '100%',
         height: 'auto',
       }}
       priority={false}

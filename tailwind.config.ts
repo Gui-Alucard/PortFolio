@@ -48,8 +48,13 @@ module.exports = {
       },
 
       dropShadow: {
-        'main-photo': '0 16px 8px rgba(129, 70, 255, 0.8)',
+        'main-photo': '0 12px 8px rgba(129, 70, 255, 0.8)',
+        skills: '0 4px 2px rgba(129, 70, 255, 0.5)',
         home: '0 0 1rem rgba(129, 70, 255, 0.8)',
+      },
+
+      screens: {
+        about: '500px',
       },
 
       keyframes: {
@@ -70,4 +75,9 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    // ...
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }

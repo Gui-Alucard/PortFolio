@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <header>
                 <Header />
               </header>
-              <main className="z-1 relative flex h-screen items-start justify-center sm:items-center">
+              <main className="z-1 relative flex h-screen items-start justify-center py-14 duration-500 sm:items-center sm:pt-0">
                 {children}
               </main>
             </TranslatorProvider>

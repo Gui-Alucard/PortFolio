@@ -55,8 +55,8 @@ export default function ParticlesComponent({
         <div
           className={
             pathname === '/'
-              ? 'max-h-screen overflow-y-scroll'
-              : 'max-h-full overflow-y-scroll'
+              ? 'm-0 box-border h-screen max-h-screen w-screen overflow-y-scroll p-0'
+              : 'm-0 box-border h-screen max-h-full w-screen overflow-y-scroll p-0'
           }
         >
           <Particles particlesLoaded={particlesLoaded} options={options} />
