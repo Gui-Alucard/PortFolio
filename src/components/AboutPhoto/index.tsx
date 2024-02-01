@@ -21,6 +21,7 @@ export default function AboutPhoto() {
           height: 'auto',
         }}
         priority={false}
+        placeholder="blur"
         className="w-fit duration-500 hover:filter-none about:min-w-64 about:max-w-[640px] md:grayscale"
       />
     </motion.div>

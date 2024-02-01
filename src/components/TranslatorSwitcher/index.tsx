@@ -9,7 +9,7 @@ export const TranslatorSwitcher = () => {
   const TOOLTIP = translate[locale].TOOLTIP
 
   return (
-    <div className="md:absolute md:inset-y-0 md:right-0 md:m-4 md:h-fit">
+    <div className="md:absolute md:inset-y-0 md:right-4 md:m-4 md:h-fit lg:right-8">
       <Tooltiper content={TOOLTIP.TRANSLATE}>
         <button
           type="button"

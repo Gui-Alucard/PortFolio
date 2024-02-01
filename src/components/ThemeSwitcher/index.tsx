@@ -20,7 +20,7 @@ export const ThemeSwitcher = () => {
   return (
     <>
       {mounted && (
-        <div className="md:absolute md:inset-y-0 md:right-14 md:m-4 md:h-fit">
+        <div className="md:absolute md:inset-y-0 md:right-16 md:m-4 md:h-fit lg:right-24">
           <Tooltiper content={TOOLTIP.COLOR_MODE} padding={72}>
             <button
               type="button"

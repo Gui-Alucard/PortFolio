@@ -10,6 +10,7 @@ import { VariantsEnum } from '@/themes/variants.enum'
 import TextLink from './TextLink'
 
 import family from '@/assets/family.jpg'
+import Divider from '../Divider'
 
 export default function AboutHero() {
   const [isOpen, setOpen] = useState<boolean>(false)
@@ -43,6 +44,9 @@ export default function AboutHero() {
               : 'my-5 duration-500'
           }
         >
+          <div className="flex items-center justify-center pb-2">
+            <Divider />
+          </div>
           <p className="mb-5">{TRANSLATE.ABOUT_PAGE.FULL_TEXT_ONE}</p>
           <p className="mb-5">{TRANSLATE.ABOUT_PAGE.FULL_TEXT_TWO}</p>
           <p className="mb-5">{TRANSLATE.ABOUT_PAGE.FULL_TEXT_THIRD}</p>
@@ -60,6 +64,7 @@ export default function AboutHero() {
                 height: 'auto',
               }}
               priority={false}
+              placeholder="blur"
               className="mt-3 w-fit rounded-xl about:min-w-40 about:max-w-56"
             />
           </p>

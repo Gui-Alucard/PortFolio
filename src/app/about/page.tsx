@@ -8,6 +8,7 @@ import AboutHero from '@/components/AboutHero'
 import AboutPhoto from '@/components/AboutPhoto'
 import AboutSkills from '@/components/Cards/AboutSkills'
 import Divider from '@/components/Divider'
+
 import { SkillsEnum } from '@/components/Cards/AboutSkills/skills.enum'
 
 export default function About() {
@@ -25,7 +26,7 @@ export default function About() {
           <AboutPhoto />
           <AboutHero />
         </section>
-        <div className="flex items-center justify-center py-10">
+        <div className="flex items-center justify-center py-14">
           <Divider />
         </div>
         <section className="min-h-3/4 flex w-full items-center pb-20 md:px-[6%]">
