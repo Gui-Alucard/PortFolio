@@ -22,23 +22,57 @@
   "BUTTON": {
     "READ_MORE": "Quer saber mais?",
     "READ_LESS": "Mostre menos",
-    "KNOW_MORE": "Saiba mais"
+    "KNOW_MORE": "Saiba mais",
+    "TRANSLATE_SWITCH": "En"
   },
   "ABOUT_PAGE": {
     "TITLE": "Sobre Mim",
-    "SUB_TITLE": "Minha Jornada",
-    "FIRST_PREVIEW": "Que bom ter você por aqui. Como você pode ver, desde 1996 eu já tinha contato com tecnologia e com a chegada da internet, ficava deslumbrado com a ideia de poder veicular informações para todos, além da paixão por jogos é claro, quem nesse meio nunca quis criar um?! 😁.",
+    "FIRST_PREVIEW": "Que bom ter você por aqui. Como você pode ver, desde cedo eu já tinha contato com tecnologia. Com a chegada da internet, fiquei deslumbrado com a ideia de poder veicular informações para todos, além da paixão por jogos é claro, quem nesse meio nunca quis criar um?! 😁.",
     "SECOND_PREVIEW": "Sem mais delongas, minha trajetória começou em 2019 um pouco antes da pandemia COVID, onde fiz uma imersão completa, de segunda à segunda, estudando e praticando para me tornar um desenvolvedor full-stack. Iniciei e concluí com êxito o curso da ",
-    "THIRD_PREVIEW": ", o qual dediquei mais de 1500 horas aperfeiçoando minha habilidades, não só técnicas mas sociais também. Quatro meses antes de me formar, fui contratado como desenvolvedor júnior pela empresa VP6 consultoria. Experienciei em primeira mão o que é trabalhar com grandes nomes desde o começo, prestando serviços para empresas como, Banco Inter, Pif-Paf, Patrimar, ViewCO e entre outras. Graças a isso e ao excelentes tutores que me deram lições importantes, tive um crescimento pessoal e curricular de forma exponêncial, o que me garantiu a vaga de desenvolvedor pleno na empresa mais bem conceituada na America Latina, a ",
-    "FULL_TEXT_ONE": "Bom, se você chegou até aqui, significa que está curioso por saber um pouco mais sobre mim além de toda essa parte profissional, certo?! Um bom momento para começar é contando a partir dos meus 12 anos de idade, quando eu ingrecei em um grupo de break dance. A importancia desse acontecimento se dá para minhas sof-skills em lidar com muitas pessoas e superar desafios, pode não parecer mas já dancei em palcos para mais de 50 mil pessoas. Me envolvi em diversos projetos sociais, fiz arte (grafite) e liderei integrantes.",
-    "FULL_TEXT_TWO": "Quando fiz 17 anos de idade em 2007, comecei a estudar para me tornar piloto de helicópteros e nesse período, me formei e trabalhei como mecânico de aeronaves para me envolver mais nesse mundo. Por mais 9 anos, me esforcei para conseguir tirar a brevê de piloto privado e percebi que somente com meu esforço e minha condição financeira na época, estava sendo um desperdício de potencial. Por fim, todo o dinheiro que juntei até aquele momento resolvi investir em mim de outra forma e resolvi me mudar para o Canadá.",
-    "FULL_TEXT_THIRD": "Minha mudança para o Canadá foi muito tranquila graças a gentileza e paciência daqueles que estavam próximos a mim. No meu 3º mês eu já estava trabalhando e me comunicava bem. Morei por 1 ano e meio em Whistler, na Colúmbia Britânica. Estar sempre aprendendo algo é muito importante para mim e por ser muito dedicado, me destaquei como faxineiro do hotel Aava e fui promovido para o setor de manutenção. Como eu era solteiro, acabei aceitando mais uma promoção e comecei a trabalhar com auditoria no período noturno e acabei voltando a me envolver com esse mundo tecnológico, onde fazia o fechamento do dia e iniciava outro, além de receber os novos hospedes que chegavam durante a noite.",
-    "FULL_TEXT_FOURTH": "Durante o meu tempo no Canadá, visitei o Brasil algumas vezes e conheci minha esposa. Posso dizer que voltar para o Brasil, foi a melhor decisão que já tomei na vida. Com meu retorno, pude acompanhar o nascimento do meu filho e foi nesse ano - 2019 - que conheci o curso da ",
-    "FULL_TEXT_END": "Hoje sou muito feliz e realizado. O meu desejo atual é dar à minha família a liberdade e opção de escolha que um país de 1º mundo, como o Canadá, dispõem para os seus cidadãos."
+    "THIRD_PREVIEW": "o qual dediquei mais de 1500 horas aperfeiçoando minha habilidades, não só técnicas mas sociais também. Quatro meses antes de me formar, fui contratado como desenvolvedor júnior pela empresa VP6 consultoria. Experienciei em primeira mão o que é trabalhar com grandes nomes desde o começo, prestando serviços para empresas como, Banco Inter, Pif-Paf, Patrimar, ViewCO e entre outras. Graças a isso e ao excelentes tutores que me deram lições importantes, tive um crescimento pessoal e curricular de forma exponencial, o que me garantiu a vaga de desenvolvedor pleno na empresa mais bem conceituada na América Latina, a ",
+    "FULL_TEXT_ONE": "Bom, se você chegou até aqui, significa que está curioso por saber um pouco mais sobre mim além de toda essa parte profissional, certo?! Um bom momento para começar é a partir dos meus 12 anos de idade, quando eu ingressei em um grupo de break dance. A importância desse acontecimento se dá para minhas soft-skills em lidar com muitas pessoas e superar desafios. Pode não parecer mas já dancei em palcos para mais de 50 mil pessoas. Me envolvi em diversos projetos sociais, fiz arte (grafite) e liderei pessoas.",
+    "FULL_TEXT_TWO": "Quando fiz 17 anos de idade em 2007, comecei a estudar para me tornar piloto de helicópteros. Me formei e trabalhei como mecânico de aeronaves para me envolver mais naquele mundo. Por mais 8 anos, me esforcei para conseguir tirar a brevê de piloto privado e percebi que, somente com meu esforço e minha condição financeira da época, estava desperdiçando meu potencial. Por fim, com todo o dinheiro que juntei até aquele momento, resolvi investir em mim de outra forma e me mudei para o Canadá.",
+    "FULL_TEXT_THIRD": "Minha mudança para o Canadá foi muito tranquila graças a gentileza e paciência daqueles que estavam próximos a mim. No 3º mês eu já estava trabalhando e me comunicava bem. Morei por 1 ano e meio em Whistler, na Colúmbia Britânica. Estar sempre aprendendo algo é muito importante para mim e por ser muito dedicado, me destaquei como faxineiro do hotel Aava e fui promovido para o setor de manutenção. Como eu era solteiro, acabei aceitando mais uma promoção e comecei a trabalhar com auditoria no período noturno onde voltei a me envolver com esse mundo tecnológico. Realizava o fechamento do dia e iniciava um novo, além de receber os novos hóspedes que chegavam durante a noite.",
+    "FULL_TEXT_FOURTH": "Durante o meu tempo no Canadá, visitei o Brasil algumas vezes e conheci minha esposa. Posso dizer que voltar para o Brasil, foi a melhor decisão que tomei na vida. Com meu retorno, pude acompanhar o nascimento do meu filho e foi nesse ano - 2019 - que conheci o curso da ",
+    "FULL_TEXT_END": "Hoje sou muito feliz e realizado. O meu desejo atual é dar à minha família a liberdade e opção de escolha para fazerem o que sempre sonharam, sem toda a preocupação econômica. 😎"
   },
   "SKILLS": {
     "FRONT_TITLE": "Habilidades Front-End",
     "BACK_TITLE": "Habilidades Back-End",
     "OTHERS_TITLE": "Outras Habilidades"
+  },
+  "CONTACT_PAGE": {
+    "TITLE": "Vamos Entrar em Contato",
+    "SUB_TITLE": "Por gentileza, preencha o formulário abaixo",
+    "SEND_EMAIL": "Enviar",
+    "SENDING_EMAIL": "Enviando...",
+    "SEND_RESPONSE": "Email enviado com sucesso!",
+    "ERROR_MESSAGE": "Caro usuário, um ou mais campos não foram preenchidos adequadamente!",
+    "ERRORS": {
+      "TOAST_MESSAGE": "Caro usuário, um ou mais campos não foram preenchidos adequadamente!",
+      "FIRST_NAME": "Primeiro nome é obrigatório!",
+      "LAST_NAME": "Último nome é obrigatório",
+      "PHONE": "Telefone parece estar errado!",
+      "EMAIL": "Email parece estar errado!",
+      "SUBJECT": "Assunto é obrigatório!",
+      "MESSAGE": "Mensagem é obrigatória!",
+      "CLOSE": "Fechar"
+    },
+    "LABELS": {
+      "FIRST_NAME": "Primeiro Nome",
+      "LAST_NAME": "Último Nome",
+      "PHONE": "Telefone",
+      "EMAIL": "E-mail",
+      "SUBJECT": "Assunto",
+      "MESSAGE": "Mensagem"
+    },
+    "PLACEHOLDERS": {
+      "FIRST_NAME": "Carla",
+      "LAST_NAME": "Nunes",
+      "PHONE": "Opicional",
+      "EMAIL": "contato@gmail.com",
+      "SUBJECT": "Tente, vamos trabalhar juntos!",
+      "MESSAGE": "Por gentileza, escreva sua mensagem aqui..."
+    }
   }
 }

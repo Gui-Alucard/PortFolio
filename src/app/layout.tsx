@@ -1,5 +1,6 @@
-import { ReactNode } from 'react'
 import dynamic from 'next/dynamic'
+
+import { ReactNode } from 'react'
 import { ThemeProvider } from './theme-provider'
 
 import Header from '@/components/Header'
@@ -12,6 +13,7 @@ import {
 
 import './globals.css'
 import { TranslatorProvider } from '@/global/translate/Translator.context'
+import { Toaster } from 'react-hot-toast'
 
 const ParticlesComponent = dynamic(() => import('@/components/Particles'), {
   loading: () => null,
@@ -47,6 +49,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ParticlesComponent>
+            <Toaster position="top-right" />
             <TranslatorProvider>
               <header>
                 <Header />

@@ -22,23 +22,56 @@
   "BUTTON": {
     "READ_MORE": "Want to know more?",
     "READ_LESS": "Read less",
-    "KNOW_MORE": "Know more"
+    "KNOW_MORE": "Know more",
+    "TRANSLATE_SWITCH": "Pt-Br"
   },
   "ABOUT_PAGE": {
     "TITLE": "About Me",
-    "SUB_TITLE": "My Journey",
-    "FIRST_PREVIEW": "It's good to have you here. As you can see, since 1996 I had already had contact with technology and with the arrival of the internet. I was dazzled by the idea of being able to convey information to everyone and in addition to my passion for games - of course - who in this field has never wanted to create one?! 😁.",
-    "SECOND_PREVIEW": "Without further ado, my journey began in 2019 just before the COVID pandemic where I did a complete immersion, from Monday to Monday, studying and practicing to become a full-stack developer. I started and successfully completed the",
-    "THIRD_PREVIEW": "course, where I dedicated more than 1500 hours improving my skills not only technical but also social. Four months before graduating, I was hired as a junior developer by VP6 consultancy. I experienced what it's like to work with big names from the beginning such as Inter Bank, Pif-Paf, Patrimar, ViewCO and others. Thanks to that and the excellent tutors who gave me important lessons, I had an exponential personal and curricular growth which guaranteed me a position as a full-stack developer at the most highly regarded company in Latin America, the ",
-    "FULL_TEXT_ONE": "Well, if you've made it this far, it means you're curious to know a little more about me, besides all this professional stuff, right?! A good time to start is from when I was 12 years old when I joined a break-dance group. The importance of that event is due to my soft skills in dealing with many people and overcoming challenges. It may not seem like it but I have danced on stages in front of more than 50 thousand people. I got involved in several social projects, made art (graffiti) and led members.",
-    "FULL_TEXT_TWO": "When I got my 17's in 2007, I did start studying to become a helicopter pilot and during this period, I graduated and worked as an aircraft mechanic to become more involved in this world. For another 9 years I struggled to get my private pilot's license and realized that just with my effort and my financial condition at the time, I was wasting my potential. Finally, all the money I had saved up to that point I decided to invest in myself in another way and moved to Canada.",
-    "FULL_TEXT_THIRD": "My move to Canada was very chill thanks to the kindness and patience of those close to me. In my 3rd month I was already working and communicating well. I lived for 1 and a half years in Whistler, at the British Columbia. Always learning something is very important to me and because I am very dedicated, I stood out as a cleaner at the Aava hotel and was promoted to the maintenance sector. As I was single, I ended up accepting another promotion and started working with auditing at night and ended up getting back involved in this technological world, where I closed the day and started another in addition to welcoming new guests who arrived during the night.",
-    "FULL_TEXT_FOURTH": "During my time in Canada, I visited Brazil a few times and met my wife. I can say that returning to Brazil was the best decision I have ever made in my life. Upon my return, I was able to attend the birth of my son and it was in that year - 2019 - that I discovered the course of ",
-    "FULL_TEXT_END": "Today I am very happy and fulfilled. My current desire is to give to my family the freedom and choice that a first world country, like Canada, has for its citizens."
+    "FIRST_PREVIEW": "It's good to have you here. As you can see, I had contact with technology from an early age. With the arrival of the internet, I was dazzled by the idea of being able to convey information to everyone, besides the passion for games of course, who in this field never wanted to create one?! 😁.",
+    "SECOND_PREVIEW": "Without further ado, my journey began in 2019 just before the COVID pandemic, where I did a complete immersion, from Monday to Monday, studying and practicing to become a full-stack developer. I started and successfully completed the",
+    "THIRD_PREVIEW": "course, which I dedicated more than 1500 hours improving my skills, not only technical but also social. Four months before graduating, I was hired as a junior developer by VP6 consultancy. I experienced first-hand what it's like to work with big names from the beginning, providing services to companies such as Banco Inter, Pif-Paf, Patrimar, ViewCO and others. Thanks to this and the excellent tutors who gave me important lessons, I experienced exponential personal and curricular growth, which guaranteed me a position as a full developer at the most highly regarded company in Latin America, ",
+    "FULL_TEXT_ONE": "Well, if you've made it this far, it means you're curious to know a little more about me beyond all this professional stuff, right?! A good time to start is when I was 12 years old, when I joined a break dance group. The importance of this event is due to my soft-skills in dealing with many people and overcoming challenges. It may not seem like it, but I've danced on stages in front of more than 50 thousand people. I got involved in several social projects, made art (graffiti) and led people.",
+    "FULL_TEXT_TWO": "When I turned 17 in 2007, I started studying to become a helicopter pilot. I graduated and worked as an aircraft mechanic to get more involved in that world. For another 8 years, I struggled to get my private pilot's license and realized that, just with my effort and my financial condition at the time, I was wasting my potential. Finally, with all the money I had saved up to that point, I decided to invest in myself in another way and moved to Canada.",
+    "FULL_TEXT_THIRD": "My move to Canada went very smoothly thanks to the kindness and patience of those close to me. In the 3rd month I was already working and communicating well. I lived for 1 and a half years in Whistler, British Columbia. Always learning something is very important to me and because I am very dedicated, I stood out as a cleaner at the Aava hotel and was promoted to the maintenance sector. As I was single, I ended up accepting another promotion and started working in auditing at night where I got back involved with this technological world. I closed the day and started a new one, in addition to welcoming new guests who arrived at night.",
+    "FULL_TEXT_FOURTH": "During my time in Canada, I visited Brazil a few times and met my wife. I can say that returning to Brazil was the best decision I made in my life. Upon my return, I was able to attend the birth of my son and it was in that year - 2019 - that I discovered the course of ",
+    "FULL_TEXT_END": "Today I am very happy and fulfilled. My current desire is to give my family the freedom and choice to do what they always dreamed of, without all the economic worries."
   },
   "SKILLS": {
     "FRONT_TITLE": "Front-End Skills",
     "BACK_TITLE": "Back-End Skills",
     "OTHERS_TITLE": "Others Skills"
+  },
+  "CONTACT_PAGE": {
+    "TITLE": "Let's Getting in Touch",
+    "SUB_TITLE": "Please, fill the form below",
+    "SEND_EMAIL": "Send",
+    "SENDING_EMAIL": "Sending...",
+    "SEND_RESPONSE": "Email sent successfully!",
+    "ERRORS": {
+      "TOAST_MESSAGE": "Dear user, one or more fields were not filled in properly!",
+      "FIRST_NAME": "First Name is required!",
+      "LAST_NAME": "Last Name is required!",
+      "PHONE": "Phone seems to be wrong!",
+      "EMAIL": "Email seems to be wrong!",
+      "SUBJECT": "Subject is required!",
+      "MESSAGE": "Message is required!",
+      "CLOSE": "Close"
+    },
+    "LABELS": {
+      "FIRST_NAME": "First Name",
+      "LAST_NAME": "Last Name",
+      "PHONE": "Phone",
+      "EMAIL": "E-mail",
+      "SUBJECT": "Subject",
+      "MESSAGE": "Message"
+    },
+    "PLACEHOLDERS": {
+      "FIRST_NAME": "Jane",
+      "LAST_NAME": "Doe",
+      "PHONE": "Optional",
+      "EMAIL": "contact@gmail.com",
+      "SUBJECT": "Try, let's work together!",
+      "MESSAGE": "Please, type your message here..."
+    }
   }
 }

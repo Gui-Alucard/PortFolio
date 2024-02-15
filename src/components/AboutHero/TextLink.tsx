@@ -10,12 +10,12 @@ interface ITextLink {
 export default function TextLink({ textKey, url }: ITextLink) {
   return (
     <Link key={textKey} target="_blank" href={url}>
-      <motion.p
+      <motion.span
         whileTap={{ scale: 1.2 }}
         className="mx-1 inline-flex items-center justify-between text-sm text-indigo-500 dark:text-purple-400 sm:text-base lg:text-lg"
       >
-        {textKey} <FaExternalLinkAlt className="ml-1" />
-      </motion.p>
+        {textKey} <FaExternalLinkAlt className="mx-1" />
+      </motion.span>
     </Link>
   )
 }

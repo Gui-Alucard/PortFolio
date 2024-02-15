@@ -4,8 +4,9 @@ import {
   translate,
 } from '@/global/translate/Translator.context'
 import TypeAnimator from '../TypeAnimator'
-import SocialMedia from './SocialMedia'
-import { SocialMediaEnum } from './socialmedia.enum'
+import DownloadCV from '../Common/DownloadCV'
+import SocialMedia from '../Common/SocialMedia'
+import { SocialMediaEnum } from '../Common/SocialMedia/socialmedia.enum'
 
 interface ISummary {
   translate: typeof translate
@@ -31,6 +32,7 @@ export default function Summary({ translate, locale }: ISummary) {
       <section className="mt-6 flex w-1/2 flex-1 flex-row items-start space-x-6 sm:w-1/3 md:mt-10 md:w-1/4">
         <SocialMedia name={SocialMediaEnum.LINKEDIN} />
         <SocialMedia name={SocialMediaEnum.GITHUB} />
+        <DownloadCV />
       </section>
     </>
   )
