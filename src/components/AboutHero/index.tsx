@@ -19,7 +19,7 @@ export default function AboutHero() {
 
   return (
     <motion.aside
-      className="mt-[calc(78vw-20%)] flex h-fit w-4/5 flex-col items-start justify-center duration-500 about:justify-start md:my-0 md:ml-14 md:h-[28rem] md:w-1/2 lg:max-w-[768px]"
+      className="flex h-fit w-4/5 flex-col items-start justify-start duration-500 md:ml-14 md:h-[28rem] md:w-1/2 lg:max-w-[768px]"
       variants={fadeIn(VariantsEnum.LEFT, 0.2)}
       initial="hidden"
       animate="show"
@@ -52,12 +52,13 @@ export default function AboutHero() {
           <p className="mb-5">{TRANSLATE.ABOUT_PAGE.FULL_TEXT_THIRD}</p>
           <p className="mb-5">
             {TRANSLATE.ABOUT_PAGE.FULL_TEXT_FOURTH}{' '}
-            <TextLink textKey="Trybe" url="https://www.betrybe.com" />
+            <TextLink textKey="Trybe." url="https://www.betrybe.com" />
           </p>
           <p className="mb-5">
             {TRANSLATE.ABOUT_PAGE.FULL_TEXT_END}
             <Image
               src={family}
+              loading="lazy"
               alt="picture of me"
               style={{
                 width: '80%',

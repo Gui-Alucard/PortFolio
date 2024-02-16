@@ -1,18 +1,26 @@
 'use client'
 
+import dynamic from 'next/dynamic'
+
 import { Suspense } from 'react'
 import Loading from './loading'
 
 import { useTranslator } from '@/global/translate/Translator.context'
 
 import Summary from '@/components/Summary'
-import AnimatedPhoto from '@/components/AnimatedPhoto'
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { fadeIn } from '@/themes/variants'
 import { VariantsEnum } from '@/themes/variants.enum'
 
-import mainPic from '@/assets/main-picture.jpg'
+// const ParticlesComponent = dynamic(() => import('@/components/Particles'), {
+//   loading: () => null,
+//   ssr: false,
+// })
+
+const AnimatedPhoto = dynamic(() => import('@/components/AnimatedPhoto'), {
+  loading: () => null,
+})
 
 export default function Page() {
   const { locale, translate } = useTranslator()
@@ -20,7 +28,7 @@ export default function Page() {
 
   return (
     <Suspense fallback={<Loading title={TEXT.TITLE} message={TEXT.MESSAGE} />}>
-      <section className="h-fit py-8 md:mt-0">
+      <section className="no-scrollbar flex h-screen items-center justify-center overflow-y-scroll pb-32 pt-10 md:pb-0 md:pt-0">
         <section className="flex flex-col-reverse items-center justify-center px-6 md:flex-row">
           {/* Left - Bottom */}
           <AnimatePresence mode="wait">
@@ -40,7 +48,7 @@ export default function Page() {
               initial="hidden"
               animate="show"
             >
-              <AnimatedPhoto staticImage={mainPic} width="70%" />
+              <AnimatedPhoto />
             </motion.aside>
           </AnimatePresence>
         </section>

@@ -1,21 +1,19 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 
-export default function AnimatedPhoto({
-  staticImage,
-  width,
-}: {
-  staticImage: StaticImageData
-  width?: string
-}) {
+import mainPic from '@/assets/main-picture.jpg'
+
+export default function AnimatedPhoto() {
   return (
     <Image
-      src={staticImage}
+      src={mainPic}
+      loading="lazy"
       alt="picture of me"
       style={{
-        width: width || '100%',
+        width: '70%',
         height: 'auto',
       }}
       priority={false}
+      placeholder="blur"
       className="w-fit animate-mainPhoto border border-purple-logo bg-cover bg-center drop-shadow-main-photo transition-all delay-150 ease-in-out md:min-w-64 md:max-w-[480px]"
     />
   )

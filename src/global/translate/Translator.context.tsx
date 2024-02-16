@@ -19,7 +19,7 @@ export interface TranslateState {
 }
 
 const initialValue: TranslateState = {
-  locale: 'ptBr',
+  locale: 'en',
   setLocale: () => EnumLanguages,
   translate,
 }
@@ -31,7 +31,7 @@ export function TranslatorProvider({
 }: {
   children: React.ReactNode
 }) {
-  const [locale, setLocale] = useState<Languages>('en')
+  const [locale, setLocale] = useState<Languages>(initialValue.locale)
   // https://www.youtube.com/watch?v=ngOwT3BPIvU
   return (
     <TranslatorContext.Provider value={{ locale, setLocale, translate }}>

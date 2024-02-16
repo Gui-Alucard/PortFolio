@@ -1,5 +1,3 @@
-import dynamic from 'next/dynamic'
-
 import { ReactNode } from 'react'
 import { ThemeProvider } from './theme-provider'
 
@@ -14,10 +12,6 @@ import {
 import './globals.css'
 import { TranslatorProvider } from '@/global/translate/Translator.context'
 import { Toaster } from 'react-hot-toast'
-
-const ParticlesComponent = dynamic(() => import('@/components/Particles'), {
-  loading: () => null,
-})
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -45,20 +39,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${baiJamjuree.variable} ${orbitron.variable} bg-purple-50 font-sans text-purple-900 duration-500 dark:bg-gray-600 dark:text-purple-50`}
+        className={`${roboto.variable} ${baiJamjuree.variable} ${orbitron.variable} overflow-y-hidden bg-gradient-to-t from-purple-100 via-purple-50 to-gray-50 bg-auto font-sans text-purple-900 duration-500 dark:from-gray-800 dark:via-purple-900 dark:to-gray-950 dark:text-purple-50`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <ParticlesComponent>
-            <Toaster position="top-right" />
-            <TranslatorProvider>
-              <header>
-                <Header />
-              </header>
-              <main className="z-1 relative flex h-screen items-start justify-center py-14 duration-500 sm:items-center sm:pt-0">
-                {children}
-              </main>
-            </TranslatorProvider>
-          </ParticlesComponent>
+          <Toaster position="top-right" />
+          <TranslatorProvider>
+            <header>
+              <Header />
+            </header>
+            <main className="flex h-screen items-center justify-center py-20 duration-500">
+              {children}
+            </main>
+          </TranslatorProvider>
         </ThemeProvider>
       </body>
     </html>

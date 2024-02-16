@@ -42,6 +42,7 @@ export default function AboutSkills({ type }: { type: SkillsEnum }) {
 
   return (
     <motion.div
+      key={type}
       variants={item}
       className="mb-8 w-2/3 rounded-lg border-b-2 border-r-2 border-purple-logo/60 bg-purple-100/30 px-10 pb-10 pt-4 font-alt text-purple-900 backdrop-blur-sm dark:bg-purple-900/20 dark:text-purple-100 sm:w-1/2 lg:w-[30%]"
     >

@@ -39,8 +39,8 @@ export default function Forms() {
       ref={formRef}
       action={async (formData) => {
         const data = await submitFormActionSendEmail(formData)
-        setFormState(data)
 
+        setFormState(data)
         if (data.response === 'error') {
           toast.custom((t) => (
             <div

@@ -10,9 +10,6 @@ import { ILink } from '../../interfaces/navbar.interface'
 import { ThemeSwitcher } from '../ThemeSwitcher'
 import { useTranslator } from '@/global/translate/Translator.context'
 import { TranslatorSwitcher } from '../TranslatorSwitcher'
-import { motion, AnimatePresence } from 'framer-motion'
-import { fadeIn } from '@/themes/variants'
-import { VariantsEnum } from '@/themes/variants.enum'
 import clsx from 'clsx'
 
 function renderLinks(links: ILink[], pathname: string, toggleMenu: () => void) {
@@ -56,68 +53,63 @@ export default function Header() {
   ]
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.nav
-        variants={fadeIn(VariantsEnum.UP, 0.2)}
-        initial="hidden"
-        animate="show"
-        id="menu-container"
-        className="fixed bottom-2 z-10 h-fit w-screen overflow-hidden md:bottom-0 md:left-0 md:top-4"
+    <nav
+      id="menu-container"
+      className="fixed bottom-2 z-10 h-fit w-screen overflow-hidden md:bottom-0 md:left-0 md:top-4"
+    >
+      {/* <!-- Mobile menu, show/hide based on menu state --> */}
+      <div
+        className="flex items-center justify-center md:hidden"
+        id="menu-mobile"
       >
-        {/* <!-- Mobile menu, show/hide based on menu state --> */}
-        <div
-          className="flex items-center justify-center md:hidden"
-          id="menu-mobile"
-        >
-          {isOpen && (
-            <div className="max-w-96 flex-grow space-y-2 rounded-lg bg-purple-100/20 p-2 backdrop-blur-2xl dark:bg-purple-900/20">
-              {renderLinks(links, pathname, toggleMenu)}
-            </div>
-          )}
-        </div>
-        <div id="menu-inner" className="mx-auto max-w-96 p-4 pt-2">
-          <div className="flex h-16 w-full flex-row items-center justify-between rounded-full bg-purple-100/20 px-6 backdrop-blur-2xl dark:bg-purple-900/20 sm:p-6 md:fixed md:left-0 md:rounded-none md:bg-transparent md:px-8 md:backdrop-blur-none dark:md:bg-transparent">
-            <div className="md:hidden">
-              {/* <!-- Mobile menu button--> */}
-              <button
-                type="button"
-                className="flex items-center justify-center text-purple-700 hover:text-purple-900 focus:outline-none dark:text-purple-400 dark:hover:text-purple-50"
-              >
-                {!isOpen ? (
-                  <FaBars
-                    onClick={toggleMenu}
-                    className="h-8 w-auto drop-shadow-home"
-                  />
-                ) : (
-                  <FaXmark
-                    onClick={toggleMenu}
-                    className="h-8 w-auto drop-shadow-home"
-                  />
-                )}
-              </button>
-            </div>
-            <div className="hidden md:flex md:flex-1 md:items-stretch md:justify-start md:focus:outline-none">
-              <Link key="home" href="/">
-                <Image
-                  src={logo}
-                  alt="logo"
-                  className="h-9 w-auto min-w-20 drop-shadow-home focus:outline-none md:h-12"
+        {isOpen && (
+          <div className="max-w-96 flex-grow space-y-2 rounded-lg bg-purple-100/20 p-2 backdrop-blur-2xl dark:bg-purple-900/20">
+            {renderLinks(links, pathname, toggleMenu)}
+          </div>
+        )}
+      </div>
+      <div id="menu-inner" className="mx-auto max-w-96 p-4 pt-2">
+        <div className="flex h-16 w-full flex-row items-center justify-between rounded-full bg-purple-100/20 px-6 backdrop-blur-2xl dark:bg-purple-900/20 sm:p-6 md:fixed md:left-0 md:rounded-none md:bg-transparent md:px-8 md:backdrop-blur-none dark:md:bg-transparent">
+          <div className="md:hidden">
+            {/* <!-- Mobile menu button--> */}
+            <button
+              type="button"
+              className="flex items-center justify-center text-purple-700 hover:text-purple-900 focus:outline-none dark:text-purple-400 dark:hover:text-purple-50"
+            >
+              {!isOpen ? (
+                <FaBars
+                  onClick={toggleMenu}
+                  className="h-8 w-auto drop-shadow-home"
                 />
-              </Link>
-              <div className="hidden md:ml-8 md:block">
-                <div className="flex space-x-4">
-                  {renderLinks(links, pathname, toggleMenu)}
-                </div>
+              ) : (
+                <FaXmark
+                  onClick={toggleMenu}
+                  className="h-8 w-auto drop-shadow-home"
+                />
+              )}
+            </button>
+          </div>
+          <div className="hidden md:flex md:flex-1 md:items-stretch md:justify-start md:focus:outline-none">
+            <Link key="home" href="/">
+              <Image
+                src={logo}
+                alt="logo"
+                className="h-9 w-auto min-w-20 drop-shadow-home focus:outline-none md:h-12"
+              />
+            </Link>
+            <div className="hidden md:ml-8 md:block">
+              <div className="flex space-x-4">
+                {renderLinks(links, pathname, toggleMenu)}
               </div>
             </div>
-
-            {/* <!-- DARK MODE ---> */}
-            <ThemeSwitcher />
-            {/* <!-- TRANSLATOR ---> */}
-            <TranslatorSwitcher />
           </div>
+
+          {/* <!-- DARK MODE ---> */}
+          <ThemeSwitcher />
+          {/* <!-- TRANSLATOR ---> */}
+          <TranslatorSwitcher />
         </div>
-      </motion.nav>
-    </AnimatePresence>
+      </div>
+    </nav>
   )
 }
