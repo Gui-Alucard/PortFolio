@@ -13,7 +13,7 @@ export const TranslatorSwitcher = () => {
       <Tooltiper content={TRANSLATE.TOOLTIP.TRANSLATE}>
         <button
           type="button"
-          className="flex items-center justify-center text-purple-700 hover:text-purple-950 focus:outline-none dark:text-purple-400 dark:hover:text-purple-50 md:transition-colors md:delay-200"
+          className="flex items-center justify-center text-purple-700 hover:text-purple-950 focus:outline-none md:transition-colors md:delay-200 dark:text-purple-400 dark:hover:text-purple-50"
         >
           <VscGlobe
             onClick={() => setLocale(locale === 'en' ? 'ptBr' : 'en')}

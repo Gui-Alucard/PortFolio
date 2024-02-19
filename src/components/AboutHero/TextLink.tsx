@@ -12,7 +12,7 @@ export default function TextLink({ textKey, url }: ITextLink) {
     <Link key={textKey} target="_blank" href={url}>
       <motion.span
         whileTap={{ scale: 1.2 }}
-        className="mx-1 inline-flex items-center justify-between text-sm text-indigo-500 dark:text-purple-400 sm:text-base lg:text-lg"
+        className="mx-1 inline-flex items-center justify-between text-sm text-indigo-500 sm:text-base lg:text-lg dark:text-purple-400"
       >
         {textKey} <FaExternalLinkAlt className="mx-1" />
       </motion.span>

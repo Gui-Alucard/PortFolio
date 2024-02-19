@@ -26,7 +26,7 @@ export default function Summary({ translate, locale }: ISummary) {
         {TEXT.TITLE}&nbsp;
         <TypeAnimator stackOne={TEXT.STACK_ONE} stackTwo={TEXT.STACK_TWO} />
       </span>
-      <p className="mt-6 text-left text-sm leading-relaxed text-purple-900 dark:text-gray-50 sm:text-base md:mt-10 md:text-justify lg:text-lg">
+      <p className="mt-6 text-left text-sm leading-relaxed text-purple-900 sm:text-base md:mt-10 md:text-justify lg:text-lg dark:text-gray-50">
         {TEXT.SUMMARY}
       </p>
       <section className="mt-6 flex w-1/2 flex-1 flex-col items-start space-y-6 sm:w-1/3 md:mt-10 md:w-1/4 md:flex-row md:space-x-6 md:space-y-0">
