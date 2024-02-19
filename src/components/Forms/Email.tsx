@@ -16,9 +16,10 @@ type EmailProps = {
   message: string
   email: string
   author: string
+  phone?: string
 }
 
-export default function Email({ message, email, author }: EmailProps) {
+export default function Email({ message, email, author, phone }: EmailProps) {
   const texts = {
     TERMS:
       'Essa mensagem foi produzida e distribuída por Resend e Guilherme S. Oliveira. Todos os direitos reservados.',
@@ -26,6 +27,7 @@ export default function Email({ message, email, author }: EmailProps) {
     HEADING: 'Você recebeu a seguinte mensagem do portfólio',
     AUTHOR: 'Autor: ',
     CONTACT: 'E-mail para contato: ',
+    PHONE: 'Telefone: ',
   }
 
   return (
@@ -60,6 +62,12 @@ export default function Email({ message, email, author }: EmailProps) {
                 {texts.AUTHOR}
                 {author}
               </Text>
+              {phone && (
+                <Text className="m-0 mb-1 font-sans text-sm text-gray-950">
+                  {texts.PHONE}
+                  {phone}
+                </Text>
+              )}
               <Text className="m-0 font-sans text-sm text-gray-950">
                 {texts.CONTACT}
                 {email}

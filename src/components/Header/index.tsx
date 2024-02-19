@@ -69,7 +69,7 @@ export default function Header() {
         )}
       </div>
       <div id="menu-inner" className="mx-auto max-w-96 p-4 pt-2">
-        <div className="flex h-16 w-full flex-row items-center justify-between rounded-full bg-purple-100/20 px-6 backdrop-blur-2xl dark:bg-purple-900/20 sm:p-6 md:fixed md:left-0 md:rounded-none md:bg-transparent md:px-8 md:backdrop-blur-none dark:md:bg-transparent">
+        <div className="flex h-16 w-full flex-row items-center justify-between rounded-full bg-purple-100/20 px-6 backdrop-blur-2xl sm:p-6 md:fixed md:left-0 md:rounded-none md:bg-transparent md:px-8 md:backdrop-blur-none dark:bg-purple-900/20 dark:md:bg-transparent">
           <div className="md:hidden">
             {/* <!-- Mobile menu button--> */}
             <button
@@ -94,7 +94,7 @@ export default function Header() {
               <Image
                 src={logo}
                 alt="logo"
-                className="h-9 w-auto min-w-20 drop-shadow-home focus:outline-none md:h-12"
+                className="h-9 w-auto drop-shadow-home focus:outline-none md:h-12"
               />
             </Link>
             <div className="hidden md:ml-8 md:block">

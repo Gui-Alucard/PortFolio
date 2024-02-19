@@ -58,7 +58,12 @@ export async function submitFormActionSendEmail(
       to: 'guilhermeanv7822@gmail.com',
       subject,
       reply_to: email,
-      react: React.createElement(Email, { message, email, author: name }),
+      react: React.createElement(Email, {
+        message,
+        email,
+        author: name,
+        phone,
+      }),
     })
 
     return {

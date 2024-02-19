@@ -47,6 +47,7 @@
     "SEND_EMAIL": "Enviar",
     "SENDING_EMAIL": "Enviando...",
     "SEND_RESPONSE": "Email enviado com sucesso!",
+    "EMAIL_ASPECT": "Aspecto",
     "ERROR_MESSAGE": "Caro usuário, um ou mais campos não foram preenchidos adequadamente!",
     "ERRORS": {
       "TOAST_MESSAGE": "Caro usuário, um ou mais campos não foram preenchidos adequadamente!",

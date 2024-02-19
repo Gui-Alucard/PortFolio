@@ -1,5 +1,6 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslator } from '@/global/translate/Translator.context'
 
@@ -7,6 +8,10 @@ import Input from './Input'
 import toast from 'react-hot-toast'
 import { SubmitButton } from './SubmitButton'
 import { FormState, submitFormActionSendEmail } from './Action'
+
+const ImagePopover = dynamic(() => import('@/components/Forms/Popover'), {
+  loading: () => null,
+})
 
 const initialFormState: FormState = {
   response: '',
@@ -171,7 +176,7 @@ export default function Forms() {
             {TRANSLATE.LABELS.MESSAGE}
           </label>
           <textarea
-            className="form-input mb-1 block min-h-24 w-full appearance-none rounded border-b-2 border-r-2 border-purple-logo/60 bg-purple-100/20 px-4 py-3 leading-tight text-purple-900 placeholder-purple-900/50 focus:border-purple-logo focus:bg-purple-50/20 focus:outline-none focus:ring-0 dark:text-purple-50 dark:placeholder-purple-100/50"
+            className="form-input mb-1 block h-24 w-full appearance-none rounded border-b-2 border-r-2 border-purple-logo/60 bg-purple-100/20 px-4 py-3 leading-tight text-purple-900 placeholder-purple-900/50 focus:border-purple-logo focus:bg-purple-50/20 focus:outline-none focus:ring-0 dark:text-purple-50 dark:placeholder-purple-100/50"
             id="grid-message"
             name="message"
             placeholder={TRANSLATE.PLACEHOLDERS.MESSAGE}
@@ -184,7 +189,10 @@ export default function Forms() {
           )}
         </div>
       </div>
-      <SubmitButton />
+      <div className="flex items-center justify-between gap-4">
+        <SubmitButton />
+        <ImagePopover text={TRANSLATE.EMAIL_ASPECT} />
+      </div>
     </form>
   )
 }

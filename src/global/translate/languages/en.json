@@ -47,6 +47,7 @@
     "SEND_EMAIL": "Send",
     "SENDING_EMAIL": "Sending...",
     "SEND_RESPONSE": "Email sent successfully!",
+    "EMAIL_ASPECT": "Aspect",
     "ERRORS": {
       "TOAST_MESSAGE": "Dear user, one or more fields were not filled in properly!",
       "FIRST_NAME": "First Name is required!",

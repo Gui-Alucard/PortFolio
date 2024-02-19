@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <header>
               <Header />
             </header>
-            <main className="flex h-screen items-center justify-center py-20 duration-500">
+            <main className="mb-6 flex h-screen w-screen items-center justify-center py-20 duration-500">
               {children}
             </main>
           </TranslatorProvider>

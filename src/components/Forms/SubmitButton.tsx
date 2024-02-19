@@ -15,14 +15,14 @@ export function SubmitButton() {
       type="submit"
       whileHover={{ scale: 1.1 }}
       transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-      className="mt-6 flex h-auto w-fit cursor-pointer items-center justify-center rounded-[0.250rem] bg-purple-logo px-4 py-1 font-bold text-purple-50"
+      className="flex h-auto w-fit cursor-pointer items-center justify-center rounded-[0.250rem] bg-purple-logo px-4 py-1 font-bold text-purple-50 hover:text-purple-50 focus:outline-none"
     >
       {pending ? (
         TRANSLATE.SENDING_EMAIL
       ) : (
         <>
           {TRANSLATE.SEND_EMAIL}{' '}
-          <BsSendFill className="ml-2 text-sm text-purple-50" />
+          <BsSendFill className="ml-2 text-sm hover:text-purple-50" />
         </>
       )}
     </motion.button>

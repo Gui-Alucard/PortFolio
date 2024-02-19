@@ -27,7 +27,7 @@ export default function AboutHero() {
       <h3 className="p-3 font-alt text-3xl font-bold tracking-tight text-purple-logo sm:whitespace-nowrap sm:text-4xl lg:text-6xl xl:text-7xl">
         {TRANSLATE.ABOUT_PAGE.TITLE}
       </h3>
-      <motion.div className="mb-5 overflow-y-scroll overscroll-none scroll-smooth text-wrap rounded-xl bg-purple-100/20 px-3.5 text-left text-sm leading-8 text-purple-900 backdrop-blur-sm dark:bg-purple-900/20 dark:text-purple-50 sm:text-base md:mb-0 md:mt-10 md:text-justify md:scrollbar md:scrollbar-track-purple-900 md:scrollbar-thumb-purple-logo md:scrollbar-track-rounded-full md:scrollbar-thumb-rounded-full md:scrollbar-w-3 lg:text-lg">
+      <motion.div className="mb-5 overflow-y-scroll overscroll-none scroll-smooth text-wrap rounded-xl bg-purple-100/20 px-3.5 text-left text-sm leading-8 text-purple-900 backdrop-blur-sm sm:text-base md:mb-0 md:mt-10 md:text-justify md:scrollbar md:scrollbar-track-purple-900 md:scrollbar-thumb-purple-logo md:scrollbar-track-rounded-full md:scrollbar-thumb-rounded-full md:scrollbar-w-3 lg:text-lg dark:bg-purple-900/20 dark:text-purple-50">
         <p className="mb-5">{TRANSLATE.ABOUT_PAGE.FIRST_PREVIEW}</p>
         <p className="mb-5">
           {TRANSLATE.ABOUT_PAGE.SECOND_PREVIEW}
@@ -36,7 +36,7 @@ export default function AboutHero() {
           <TextLink textKey="Accenture" url="https://www.accenture.com/br-pt" />
           .
         </p>
-        <motion.p
+        <motion.div
           layout
           className={
             !isOpen
@@ -66,16 +66,16 @@ export default function AboutHero() {
               }}
               priority={false}
               placeholder="blur"
-              className="mt-3 w-fit rounded-xl about:min-w-40 about:max-w-56"
+              className="mt-3 w-fit rounded-xl md:min-w-40 md:max-w-56"
             />
           </p>
-        </motion.p>
+        </motion.div>
         <motion.button
           type="button"
           whileHover={{ scale: 1.1 }}
           transition={{ type: 'spring', stiffness: 400, damping: 10 }}
           onClick={() => setOpen(!isOpen)}
-          className="my-3 h-auto w-fit cursor-pointer rounded-full bg-purple-logo px-4 py-1 font-bold text-purple-50"
+          className="my-3 h-auto w-fit cursor-pointer rounded-[0.250rem] bg-purple-logo px-4 py-1 font-bold text-purple-50"
         >
           {!isOpen ? TRANSLATE.BUTTON.READ_MORE : TRANSLATE.BUTTON.READ_LESS}
         </motion.button>
