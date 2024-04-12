@@ -1,17 +1,17 @@
 import { ReactNode } from 'react'
-import { ThemeProvider } from './theme-provider'
-
-import Header from '@/components/Header'
 
 import {
   Bai_Jamjuree as BaiJamjuree,
   Orbitron,
   Roboto_Flex as Roboto,
 } from 'next/font/google'
-
-import './globals.css'
+import { ThemeProvider } from './theme-provider'
 import { TranslatorProvider } from '@/global/translate/Translator.context'
 import { Toaster } from 'react-hot-toast'
+
+import TransitionProvider from '@/components/TransitionProvider'
+
+import './globals.css'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -44,12 +44,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Toaster position="top-right" />
           <TranslatorProvider>
-            <header>
-              <Header />
-            </header>
-            <main className="mb-6 flex h-screen w-screen items-center justify-center py-20 duration-500">
-              {children}
-            </main>
+            <TransitionProvider>{children}</TransitionProvider>
           </TranslatorProvider>
         </ThemeProvider>
       </body>

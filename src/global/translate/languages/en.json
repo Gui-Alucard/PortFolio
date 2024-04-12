@@ -41,6 +41,45 @@
     "BACK_TITLE": "Back-End Skills",
     "OTHERS_TITLE": "Others Skills"
   },
+  "PROJECTS_PAGE": {
+    "MAIN_TITLE": "My Last 3 Works",
+    "BUTTON": "Get know",
+    "READ_MORE": "Read more",
+    "READ_LESS": "Read less",
+    "FIRST_PROJECTS": {
+      "ID": 1,
+      "TITLE": "GERANDO FALCÕES",
+      "DESCRIPTION": {
+        "P1": "In 2022, at first, I was supposed to be a back-end developer who would just be there to fill a gap and support the app. It was a new project and when I say 'new', I mean not only in time, but also in global initiative. To give context, Accenture, the company I work for, promotes some global competitions and one of them is the 360° Awards, responsible for choosing the best initiative that brings real value to everyone - hence the 360°. The Gerando Falcões group's app was the winner in 2023.",
+        "P2": "During onboarding (initial familiarization process) I identified a critical problem with registrations without unique identifiers (ids). I can say that this was my awakening as a developer. Instead of presenting a solution, I had the opportunity to have a meeting directly with the client and during this video call, I demonstrated the failure and gave options for possible solutions and, working as a team, we were able to solve this problem. My colleagues and manager ended up accepting me as a tech lead and thus began my journey as a versatile leader and front-end developer, back-end and data analyst.",
+        "P3": "In addition to what has already been mentioned, I had two major situations for the app, each in its own area. The first, related to data analysis, was understanding a new programming language (R lang) and transpiling the code with more than 4 thousand lines to around 800 lines in typescript. The code was responsible for learning the trends of family responses to a questionnaire with approximately 130 questions and returning an index between 0.0 and 5.0 points referring to the level of precariousness of that family in the social environment in which it is located.",
+        "P4": "The second, important for carrying out the first, was to develop an algorithm capable of identifying the questions in the family questionnaire and which category each one belonged to. There were eight categories and in this scenario, the question/category relationship was many to many (N:M), where a question can belong to several categories and a category can belong to several questions. That said, the challenge was to present the questions once during a quiz and, if a question had already been answered in another category, show the answer to that question and give the option to edit it or move on to the next question."
+      },
+      "LINK": "https://gerandofalcoes.com"
+    },
+    "SECOND_PROJECTS": {
+      "ID": 2,
+      "TITLE": "SBT VIDEOS",
+      "DESCRIPTION": {
+        "P1": "In 2023 I also had the incredible opportunity to participate in the SBT Videos project, where I was responsible for creating a completely unique player for onDemand multimedia transmission and live stream from one of the largest television systems in the country.",
+        "P2": "At first, it would be a copy of what Youtube provides, but after the planning meeting with the client, it was decided that I should use Google's Shaka Player framework to create a reusable npm package. I had 15 days to carry out a study (spike) and on the 10th day create a POC (proof of concept) to present to the client and receive a verdict on what to do in the following 3 months. Ps.: npm package is when we have code for an app or website and we want to install a feature to use in the code, it wouldn't make sense to recreate car wheels every time we build a car, right?! 😁",
+        "P3": "I could say that it was a challenge to learn about manifests and other things that we can find in the official Shaka Player documentation, but my real achievement was implementing the advertisement system in an npm package written in react and typescript. To understand a little better, in react we have to use a method to reference the 'video' html tag and by doing this, any changes can only be tested after releasing a new version of that package. Here you can access a preview of the code for this package.",
+        "P4": "With the end of the 3 months contracted, we received great compliments from the client and this whole experience made me a reference within Accenture Brasil, in terms of video players. Visit the official SBT Videos website to experience some of my work."
+      },
+      "LINK": "https://www.sbtvideos.com.br"
+    },
+    "THIRD_PROJECTS": {
+      "ID": 3,
+      "TITLE": "ARENA MRV - GALO",
+      "DESCRIPTION": {
+        "P1": "From the end of 2023, as a back-end developer and with a good soft-skills background, I ended up becoming the best option for an amazing team responsible for creating the first super stadium app in South America, 'Super Galo's App.",
+        "P2": "I recognize that because I have a curriculum with exponential growth in learning and experience, in my first week I was already being tested. Because we had a tight deadline, I was given the task of implementing the payment system via pix and credit card for a pre-booked parking. I can say that there were days when I thought about giving up, however, I believe that the greater the challenge to be overcome, the greater the reward.",
+        "P3": "In January 2024, the payment feature via app was launched, yes, according to the customer it was a success. Today we have more than 70% of customers making pre-bookings instead of facing queues and congestion to park their vehicles.",
+        "P4": "I could describe several improvements that I participated in, such as premium plan management and fan ranking system, but my intention here is to show that I am, in fact, a responsible and dedicated professional who adapts to solve each challenge separately as needed. from the project."
+      },
+      "LINK": "https://atletico.com.br/super-app/"
+    }
+  },
   "CONTACT_PAGE": {
     "TITLE": "Let's Getting in Touch",
     "SUB_TITLE": "Please, fill the form below",

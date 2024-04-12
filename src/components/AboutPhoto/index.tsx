@@ -9,7 +9,7 @@ export default function AboutPhoto() {
   return (
     <motion.div
       className="fixed left-0 top-0 max-w-[75%] overflow-hidden rounded-ee-[12rem] border-b-2 border-r-2 border-purple-logo duration-500 md:relative md:m-0 md:flex md:h-fit md:max-w-[50%] md:items-center xl:max-w-[640px]"
-      variants={fadeIn(VariantsEnum.DOWN, 0.3)}
+      variants={fadeIn(VariantsEnum.DOWN, 0.5)}
       initial="hidden"
       animate="show"
     >

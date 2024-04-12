@@ -20,7 +20,7 @@ export default function AboutHero() {
   return (
     <motion.aside
       className="flex h-fit w-4/5 flex-col items-start justify-start duration-500 md:ml-14 md:h-[28rem] md:w-1/2 lg:max-w-[768px]"
-      variants={fadeIn(VariantsEnum.LEFT, 0.2)}
+      variants={fadeIn(VariantsEnum.LEFT, 0.5)}
       initial="hidden"
       animate="show"
     >

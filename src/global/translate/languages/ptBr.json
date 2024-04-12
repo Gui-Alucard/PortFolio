@@ -41,6 +41,45 @@
     "BACK_TITLE": "Habilidades Back-End",
     "OTHERS_TITLE": "Outras Habilidades"
   },
+  "PROJECTS_PAGE": {
+    "MAIN_TITLE": "Meus 3 Últimos Trabalhos",
+    "BUTTON": "Conheça",
+    "READ_MORE": "Leia mais",
+    "READ_LESS": "Leia menos",
+    "FIRST_PROJECTS": {
+      "ID": 1,
+      "TITLE": "GERANDO FALCÕES",
+      "DESCRIPTION": {
+        "P1": "Em 2022, a princípio, era para eu ser um desenvolvedor back-end que estaria ali apenas para preencher uma vaga e dar suporte para o app. Era um novo projeto e quando digo 'novo', quero dizer que não só em tempo, mas também em iniciativa global. Para dar contexto, a Accenture, empresa na qual trabalho, promove alguns concursos globais e um deles é o 360° Awards, responsável por eleger a melhor iniciativa que trás consigo valores reais para todos - daí o 360°. O app do grupo Gerando Falcões foi o vencedor em 2023.",
+        "P2": "Durante o onboarding (processo inicial de familiarização) identifiquei um problema crítico de cadastros sem identificadores únicos (ids). Posso afirmar que aqui foi meu despertar como desenvolvedor. Ao invés de apresentar uma solução, tive a oportunidade de ter uma reunião diretamente com o cliente e durante essa video-chamada, demostrei a falha e dei opções de escolha para possíveis soluções e, trabalhando em equipe, conseguimos solucionar esse problema. Meus colegas e gerente acabaram me aceitando como tech lead e assim começou minha jornada como um líder versátil e desenvolvedor front-end, back-end e analista de dados.",
+        "P3": "Além do que já foi citado, tive duas grandes situações para o app, cada uma em sua área. A primeira, relacionada analise de dados, foi entender uma nova linguagem de programação (R lang) e transpilar o código com mais de 4 mil linhas para cerca de 800 linhas em typescript. O código era responsável por aprender as tendências de respostas familiares à um questionário com aproximadamente 130 perguntas e retornar um índice entre 0.0 e 5.0 pontos referentes ao nível de precariedade daquela família no ambiente social em que ela se situa.",
+        "P4": "A segunda, importante para a execução da primeira, foi desenvolver um algorítmo capaz de identificar as perguntas do questionário familiar e em qual categoria cada uma pertencia. Eram oito categorias e nesse cenário, a relação pergunta/categoria era de muitas para muitas (N:M), onde uma pergunta pode pertencer a várias categorias e uma categoria pode pertencer a várias perguntas. Dito isto, o desafio foi apresentar as perguntas uma única vez durante um questionário e, caso uma pergunta já tenha sido respondida em outra categoria, mostrar a resposta daquela pergunta e dar a opção de editá-la ou passar para a próxima pergunta."
+      },
+      "LINK": "https://gerandofalcoes.com"
+    },
+    "SECOND_PROJECTS": {
+      "ID": 2,
+      "TITLE": "SBT VIDEOS",
+      "DESCRIPTION": {
+        "P1": "Em 2023 também tive a incrível oportunidade de participar do projeto SBT Videos, onde fui responsável por criar um player completamente único para transmissão multimídia onDemand e live stream de um dos maiores sistemas de televisão do país.",
+        "P2": "A princípio, seria uma cópia do que o Youtube fornece, mas após a reunião de planejamento com o cliente, ficou definido que eu deveria usar o framework Shaka Player do Google para criar um pacote npm reutilizável. Tive 15 dias para realizar um estudo (spike) e ao 10° dia criar uma POC (prove of concept) para apresentar ao cliente e receber um veredito do que fazer nos 3 meses seguintes. Ps.: pacote npm é quando temos um código para um app ou site e queremos instalar uma feature para usarmos no código, não faria sentido recriar rodas de carros toda vez que montamos um carro, neh?! 😁",
+        "P3": "Eu poderia dizer que foi um desafio aprender sobre manifestos e entre outras coisas que podemos encontrar na documentação oficial do Shaka Player, mas minha verdadeira superação foi implementar o sistema de advertisements (ads) em um pacote npm escrito em react e typescript. Para entender um pouco melhor, no react temos que usar um método para referenciar a tag html 'video' e ao fazer isso, qualquer alteração só pode ser testada após lançar uma nova versão daquele pacote. Aqui você consegue acessar uma prévia do código desse pacote.",
+        "P4": "Com o término dos 3 meses contratados, recebemos ótimos elogios do cliente e toda essa experiência me tornou uma referência dentro da Accenture Brasil, no quesito video players. Acesse o site oficial do SBT Videos para poder experimentar um pouco do meu trabalho."
+      },
+      "LINK": "https://www.sbtvideos.com.br"
+    },
+    "THIRD_PROJECTS": {
+      "ID": 3,
+      "TITLE": "ARENA MRV - GALO",
+      "DESCRIPTION": {
+        "P1": "A partir do final de 2023, como um desenvolvedor back-end e um bom background de soft-skills, acabei me tornando a melhor opção para uma equipe sensacional responsável por criar o primeiro super app de um estádio da América do Sul, o 'Super App do Galo'.",
+        "P2": "Reconheço que por ter um currículo com crescimento exponencial em aprendizagem e experiência, na minha primeira semana já estava sendo testado. Por termos um prazo apertado, me deram a task de implementar o sistema de pagamento via pix e cartão de crédito de uma pré-reserva de estacionamento. Posso dizer que teve dias que pensei em desistir, no entanto, acredito que quanto maior o desafio a ser superado, maior será a recompensa.",
+        "P3": "Em Janeiro de 2024 foi lançado a feature de pagamento via app, sim, segundo o cliente foi um sucesso. Hoje temos mais de 70% dos clientes fazendo pré-reservas ao invés de enfrentar filas e congestionamento para estacionarem seus veículos.",
+        "P4": "Eu poderia descrever várias melhorias que eu participei, como gerenciamento de planos premium e sistema de ranqueamento entre torcedores, mas o meu intuito aqui é mostrar que sou, de fato, um profissional responsável e dedicado que se adapta para solucionar cada desafio separadamente conforme a necessidade do projeto."
+      },
+      "LINK": "https://atletico.com.br/super-app/"
+    }
+  },
   "CONTACT_PAGE": {
     "TITLE": "Vamos Entrar em Contato",
     "SUB_TITLE": "Por gentileza, preencha o formulário abaixo",
