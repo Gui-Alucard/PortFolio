@@ -21,7 +21,7 @@ export default function Projects() {
       className="mt-0 h-full overflow-y-scroll md:mt-16"
     >
       <div className="flex flex-col p-12">
-        <div className="flex h-[calc(100vh-20rem)] items-center justify-center text-center font-orbitron text-8xl text-purple-900 dark:text-purple-50">
+        <div className="flex h-[calc(100vh-20rem)] items-center justify-center text-center font-orbitron text-4xl text-purple-900 md:text-8xl dark:text-purple-50">
           {TRANSLATE.MAIN_TITLE}
         </div>
         <div className="flex h-fit flex-col items-center gap-8">

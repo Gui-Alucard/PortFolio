@@ -35,7 +35,7 @@ export default function TransitionProvider({
           transition={{ duration: 0.4, ease: 'easeOut' }}
         />
         <motion.div
-          className="fixed bottom-0 left-0 right-0 top-0 z-50 m-auto h-fit w-fit cursor-default font-orbitron text-8xl text-purple-900 dark:text-purple-50"
+          className="fixed bottom-0 left-0 right-0 top-0 z-50 m-auto h-fit w-fit cursor-default font-orbitron text-3xl text-purple-900 md:text-8xl dark:text-purple-50"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
