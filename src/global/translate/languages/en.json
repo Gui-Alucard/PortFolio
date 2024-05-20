@@ -9,11 +9,16 @@
     "TITLE": "Loading...",
     "MESSAGE": "Hopefully not for too long 🥹"
   },
+  "NOT_FOUND": {
+    "TITLE": "That page doesn't exist!",
+    "MESSAGE": "The requested URL was not found on this server.",
+    "SUB_MESSAGE": "That's all we know. 🧐"
+  },
   "HOME_PAGE": {
       "TITLE": "Developer",
       "STACK_ONE": "Front-End",
       "STACK_TWO": "Back-End",
-      "SUMMARY": "Hi 👋🏼. I'm a brazilian developer who really look forward to making a solid contribution. Hope to make you enjoy my portfolio."
+      "SUMMARY": "Hi 👋🏼. I'm a brazilian developer who really look forward to make a solid contribution. Hope to make you enjoy my portfolio."
   },
   "TOOLTIP": {
       "COLOR_MODE": "Switch between dark or light modes",

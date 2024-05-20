@@ -9,6 +9,11 @@
     "TITLE": "Carregando...",
     "MESSAGE": "Espero que não seja por muito tempo 🥹"
   },
+  "NOT_FOUND": {
+    "TITLE": "Essa página não existe!",
+    "MESSAGE": "A URL requisitada não foi encontrada nesse servidor.",
+    "SUB_MESSAGE": "Isso é tudo o que sabemos. 🧐"
+  },
   "HOME_PAGE": {
     "TITLE": "Desenvolvedor",
     "STACK_ONE": "Front-End",

@@ -51,7 +51,7 @@ export default function Contact() {
               <SocialMedia name={SocialMediaEnum.LINKEDIN} />
               <SocialMedia name={SocialMediaEnum.GITHUB} />
             </div>
-            <DownloadCV />
+            <DownloadCV locale={locale} />
           </motion.section>
         </div>
       </section>

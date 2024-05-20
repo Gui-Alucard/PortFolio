@@ -34,7 +34,7 @@ export default function Summary({ translate, locale }: ISummary) {
           <SocialMedia name={SocialMediaEnum.LINKEDIN} />
           <SocialMedia name={SocialMediaEnum.GITHUB} />
         </div>
-        <DownloadCV />
+        <DownloadCV locale={locale} />
       </section>
     </>
   )

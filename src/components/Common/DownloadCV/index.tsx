@@ -1,7 +1,12 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { Languages } from '@/global/translate/Translator.context'
 
-export default function DownloadCV() {
+interface ILanguages {
+  locale: Languages
+}
+
+export default function DownloadCV({ locale }: ILanguages) {
   return (
     <motion.div
       whileHover={{
@@ -13,8 +18,8 @@ export default function DownloadCV() {
     >
       <Link
         target="_blank"
-        download="GUILHERME_ENGLISH"
-        href="/cv/GUILHERME_ENGLISH.pdf"
+        download="CV_GUILHERME"
+        href={`/cv/${locale === 'en' ? 'CV_GUILHERME_EN.pdf' : 'CV_GUILHERME_PTBR.pdf'}`}
         rel="noopener noreferrer"
         className="flex h-5 w-40 items-center justify-center font-orbitron font-bold uppercase md:h-7"
       >
